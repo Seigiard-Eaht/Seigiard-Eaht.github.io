@@ -12,20 +12,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
     <style type="text/css">
     body {
-      background: #f0f0f0;
+      background: #fefefe;
       padding: 2em;
     }
     #frame {
       width: 320px;
       height: 568px;
-      margin: 0 auto;
+      margin: 15px auto;
       display: block;
       background: none;
-      border: none;
+      border: 1px solid #9a9a9a;
+    }
+    #iphone {
+      width: 340px;
+      margin: 0 auto;
+      border: 1px solid #9a9a9a;
+      background: #efefef;
+      border-radius: 25px;
+      position: relative;
+      padding: 15px 5px;
+    }
+    .lens {
+      display: block;
+      margin: 0 auto;
+      background: #6f6f6f;
+      height: 12px;
+      width: 12px;
+      border-radius: 10px;
+    }
+    .speaker {
+      margin: 5px auto 0;
+      width: 50px;
+      height: 10px;
+      background: #6f6f6f;
+      border-radius: 15px;
+    }
+    .button {
+      position: relative;
+      margin: 0 auto;
+      background: #6f6f6f;
+      height: 45px;
+      width: 45px;
+      border-radius: 25px;
     }
     </style>
   </head>
   <body>
-    <iframe src="app.html" id="frame"></iframe>
+    <div id="iphone">
+      <div class="lens"></div>
+      <div class="speaker"></div>
+      <iframe src="app.html" id="frame"></iframe>
+      <div class="button"></div>
+    </div>
   </body>
 </html>

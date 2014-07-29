@@ -1,4 +1,4 @@
 Seigiard-Eaht.github.io
 =======================
 
-Static Sites
+Static Sites for Work
