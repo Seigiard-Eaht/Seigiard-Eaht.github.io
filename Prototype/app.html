@@ -1,0 +1,543 @@
+<!DOCTYPE html><!--[if lt IE 7 ]> <html class="ie6 lt-ie7 lt-ie8 lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 lt-ie8 lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9 lt-ie10"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="ru">
+  <!-- <![endif]-->
+  <head>
+    <title>Prototype</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="styles/main.css"/>
+  </head>
+  <body>
+    <div data-page="login" class="app-page">
+      <div class="app-topbar">
+        <div class="app-title">Login</div>
+      </div>
+      <div class="app-content">
+        <div class="app-section">
+          <ul class="app-list">
+            <li>
+              <input type="text" placeholder="Server" class="app-input">
+            </li>
+            <li>
+              <input type="text" placeholder="Login" class="app-input">
+            </li>
+            <li>
+              <input type="password" placeholder="Password" class="app-input">
+            </li>
+          </ul>
+          <div data-target="main" class="app-button green">Login</div>
+        </div>
+      </div>
+    </div>
+    <div data-page="vdo" class="app-page">
+      <div class="app-topbar">
+        <div data-back="main" class="app-button left"></div>
+        <div class="app-title">VDO Counter</div>
+      </div>
+      <div class="app-content">
+        <div class="driver-info"><span class="pull-right">VS TCO 1381<i class="icon-bus"></i></span><i class="icon-user"></i>Sergey Seletsky</div>
+        <div class="vdo-screen"><img src="images/vdo.png"></div>
+      </div>
+    </div>
+    <div data-page="control" class="app-page">
+      <div class="app-topbar">
+        <div data-back="main" class="app-button left"></div>
+        <div class="app-title">Remote Control</div>
+        <div class="app-button right"><i class="icon-print pe-lg"></i></div>
+      </div>
+      <div class="app-content">
+        <div class="remote-screen">&nbsp;</div>
+        <div class="remote-control">
+          <div class="buttons">
+            <div class="group pull-left">
+              <button>1</button>
+              <button><i class="icon-eject"></i></button>
+            </div>
+            <div class="group pull-right">
+              <button><i class="icon-eject"></i></button>
+              <button>2</button>
+            </div>
+          </div><img src="images/remotecontrol.png">
+        </div>
+      </div>
+    </div>
+    <div data-page="default" class="app-page">
+      <div class="app-topbar">
+        <div data-back="main" data-autotitle="true" class="app-button left"></div>
+        <div class="app-title">Main Page</div>
+      </div>
+      <div class="app-content"></div>
+    </div>
+    <div data-page="main" class="app-page">
+      <div class="app-topbar">
+        <div class="app-title">Main Page</div>
+      </div>
+      <div class="app-content">
+        <div class="driver-info"><span class="pull-right">VS TCO 1381<i class="icon-bus"></i></span><i class="icon-user"></i>Sergey Seletsky</div>
+        <div class="js-smartlink-not-connected">
+          <div class="app-section app-button red js-button-smartlink"><i class="icon-attention"></i> Connect to Smartlink</div>
+        </div>
+        <div class="js-smartlink-connected hide">
+          <h2 class="driver-status"><i class="icon-hourglass"></i>Time to Rest<span class="pull-right">3:15</span></h2>
+          <ul class="smartlink-bar js-driver-status">
+            <li><a class="work active"><i class="icon-steering-wheel"></i><span>Drive</span></a></li>
+            <li><a class="work"><i class="icon-tools"></i><span>Idle</span></a></li>
+            <li><a class="work"><i class="icon-lodging"></i><span>Rest</span></a></li>
+          </ul>
+          <div class="app-section app-button green js-reminder-switch js-reminder-off"><i class="icon-clock"></i>Set Reminder</div>
+          <div class="reminder js-reminder-on hide">
+            <div class="app-section app-button green js-reminder-switch">Reset</div>
+            <h3><i class="icon-clock"></i>1:45</h3>
+          </div>
+        </div>
+        <ul class="main-menu">
+          <li><a href="" class="messages"><img src="images/1p.gif"><span>Messaging</span></a></li>
+          <li><a href="" class="vdo"><img src="images/1p.gif"><span>VDO Counter</span></a></li>
+          <li><a href="" class="control"><img src="images/1p.gif"><span>Remote Control</span></a></li>
+          <li><a href="" class="calendar"><img src="images/1p.gif"><span>Calendar</span></a></li>
+          <li><a href="" class="vehicle"><img src="images/1p.gif"><span>Vehicle Check</span></a></li>
+          <li><a href="" class="settings"><img src="images/1p.gif"><span>Settings</span></a></li>
+        </ul>
+        <div data-target="login" class="app-section app-button red js-button-smartlink"><i class="icon-logout"></i> Logout</div>
+      </div>
+    </div>
+    <div data-page="messages" class="app-page">
+      <div class="app-topbar">
+        <div data-back="main" class="app-button left"></div>
+        <div class="app-title">Messages</div>
+      </div>
+      <div class="app-content">
+        <div data-target="message-new" class="app-section app-button green"><i class="icon-pencil"></i> New message</div>
+        <ul class="app-list">
+          <label>20 Jun 2014</label>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 1</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 2</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 3</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 4</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 5</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 6</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 7</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 8</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 9</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 10</li>
+          <label>21 Jun 2014</label>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 11</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 12</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 13</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 14</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 15</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 16</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 17</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 18</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 19</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 20</li>
+          <label>22 Jun 2014</label>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 21</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 22</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 23</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 24</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 25</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 26</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 27</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 28</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 29</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 30</li>
+          <label>23 Jun 2014</label>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 31</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 32</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 33</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 34</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 35</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 36</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 37</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 38</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 39</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 40</li>
+          <label>24 Jun 2014</label>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 41</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 42</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 43</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 44</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 45</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 46</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 47</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 48</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 49</li>
+          <li data-target="message" class="app-button"><small class="gray pull-right">from<strong> Site</strong></small>Message 50</li>
+        </ul>
+      </div>
+    </div>
+    <div data-page="message-new" class="app-page">
+      <div class="app-topbar">
+        <div data-back="messages" data-autotitle="" class="app-button left"></div>
+        <div class="app-title">New Message</div>
+      </div>
+      <div class="app-content">
+        <div class="app-section new-message">
+          <ul class="app-list">
+            <li>
+              <input type="text" placeholder="To" class="app-input js-input-to">
+            </li>
+            <li class="textarea">
+              <textarea placeholder="Message" rows="20" class="app-input"></textarea>
+            </li>
+          </ul>
+        </div>
+        <div data-back="" class="app-section app-button js-submit">Send</div>
+      </div>
+    </div>
+    <div data-page="message" class="app-page">
+      <div class="app-topbar">
+        <div data-back="messages" data-autotitle="" class="app-button left"></div>
+        <div class="app-title">Message</div>
+      </div>
+      <div class="app-content">
+        <div class="app-section message">
+          <h1><small class="gray pull-right">27 June 2014</small>From Site</h1>
+          <hr>
+          <p>Yeah, and if you were the pope they'd be all, "Straighten your pope hat." And "Put on your good vestments." Bender, I didn't know you liked cooking. That's so cute. Well, thanks to the Internet, I'm now bored with sex. Is there a place on the web that panders to my lust for violence? I videotape every customer that comes in here, so that I may blackmail them later. There, now he's trapped in a book I wrote: a crummy world of plot holes and spelling errors! | Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? Shinier than yours, meatbag. I don't 'need' to drink. I can quit anytime I want! What's with you kids? Every other day it's food, food, food. Alright, I'll get you some stupid food.</p>
+        </div>
+        <div data-target="message-new" data-target-args="{&quot;to&quot;:&quot;Site&quot;}" class="app-section app-button green"><i class="icon-reply"></i> Reply</div>
+      </div>
+    </div>
+    <div data-page="calendar" class="app-page">
+      <div class="app-topbar">
+        <div data-back="main" class="app-button left"></div>
+        <div class="app-title">Calendar</div>
+      </div>
+      <div class="app-content">
+        <ul class="app-list">
+          <li><span class="pull-right">FIN110000000664600</span>Card Number</li>
+        </ul>
+        <div class="calendar-nav">
+          <button class="pull-left"><i class="icon-left-open-big"></i></button>
+          <button class="pull-right"><i class="icon-right-open-big"></i></button>
+          <div class="month">Jule</div>
+        </div>
+        <ul class="calendar">
+          <li class="inactive">30</li>
+          <li data-target="calendar-day" class="inactive">31<span>&bull;</span></li>
+          <li data-target="calendar-day">1<span>&bull;</span></li>
+          <li>2</li>
+          <li>3</li>
+          <li data-target="calendar-day">4<span>&bull;</span></li>
+          <li data-target="calendar-day">5<span>&bull;</span></li>
+          <li data-target="calendar-day" class="active">6<span>&bull;</span></li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li>22</li>
+          <li>23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28</li>
+          <li>29</li>
+          <li>30</li>
+          <li class="inactive">1</li>
+          <li class="inactive">2</li>
+          <li class="inactive">3</li>
+        </ul>
+      </div>
+    </div>
+    <div data-page="calendar-day" class="app-page">
+      <div class="app-topbar">
+        <div data-back="calendar" data-autotitle="" class="app-button left"></div>
+        <div class="app-title">22 June 2014</div>
+      </div>
+      <div class="app-content">
+        <ul class="app-list">
+          <li><span class="pull-right">FIN110000000664600</span>Card Number</li>
+          <li><span class="pull-right">1177 → 1131</span>Odometer</li>
+          <li><span class="pull-right">CH → CH</span>Country</li>
+          <li><span class="pull-right">14 km</span>Distance</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul class="calendar-details">
+          <li>
+            <div class="icon"><i class="icon-steering-wheel pe-3x"></i></div>
+            <p><small class="pull-right">Single</small>Card: Inserted</p>
+            <p><span class="pull-right">00:15</span><small>11:15-11:30</small></p>
+          </li>
+          <li>
+            <div class="icon"><i class="icon-tools pe-3x"></i></div>
+            <p><small class="pull-right">Single</small>Card: Inserted</p>
+            <p><span class="pull-right">00:15</span><small>11:30-11:45</small></p>
+          </li>
+          <li>
+            <div class="icon"><i class="icon-lodging pe-3x"></i></div>
+            <p><small class="pull-right">Single</small>Card: Inserted</p>
+            <p><span class="pull-right">00:15</span><small>11:45-11:60</small></p>
+          </li>
+          <li>
+            <div class="icon"><i class="icon-steering-wheel pe-3x"></i></div>
+            <p><small class="pull-right">Single</small>Card: Inserted</p>
+            <p><span class="pull-right">00:16</span><small>12:16-12:32</small></p>
+          </li>
+          <li>
+            <div class="icon"><i class="icon-tools pe-3x"></i></div>
+            <p><small class="pull-right">Single</small>Card: Inserted</p>
+            <p><span class="pull-right">00:16</span><small>12:32-12:48</small></p>
+          </li>
+          <li>
+            <div class="icon"><i class="icon-lodging pe-3x"></i></div>
+            <p><small class="pull-right">Single</small>Card: Inserted</p>
+            <p><span class="pull-right">00:16</span><small>12:48-12:64</small></p>
+          </li>
+          <li>
+            <div class="icon"><i class="icon-steering-wheel pe-3x"></i></div>
+            <p><small class="pull-right">Single</small>Card: Inserted</p>
+            <p><span class="pull-right">00:17</span><small>13:17-13:34</small></p>
+          </li>
+          <li>
+            <div class="icon"><i class="icon-tools pe-3x"></i></div>
+            <p><small class="pull-right">Single</small>Card: Inserted</p>
+            <p><span class="pull-right">00:17</span><small>13:34-13:51</small></p>
+          </li>
+          <li>
+            <div class="icon"><i class="icon-lodging pe-3x"></i></div>
+            <p><small class="pull-right">Single</small>Card: Inserted</p>
+            <p><span class="pull-right">00:17</span><small>13:51-13:68</small></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div data-page="vehicle" class="app-page">
+      <div class="app-topbar">
+        <div data-back="main" class="app-button left"></div>
+        <div class="app-title">Vehicle Check</div>
+      </div>
+      <div class="app-content">
+        <div class="reminder js-reminder-on">
+          <div class="app-section app-button green">Change</div>
+          <h3><i class="icon-bus"></i>KH12123</h3>
+        </div>
+        <ul class="app-list checklist">
+          <label>Checklist</label>
+          <li>
+            <label>
+              <div class="pull-right">
+                <div class="checkbox-helper">
+                  <input type="checkbox"><span></span>
+                </div>
+              </div>Body Damage
+            </label>
+            <textarea placeholder="Body Damage" class="app-input"></textarea>
+          </li>
+          <li>
+            <label>
+              <div class="pull-right">
+                <div class="checkbox-helper">
+                  <input type="checkbox"><span></span>
+                </div>
+              </div>Tyres
+            </label>
+            <textarea placeholder="Tyres" class="app-input"></textarea>
+          </li>
+          <li>
+            <label>
+              <div class="pull-right">
+                <div class="checkbox-helper">
+                  <input type="checkbox" checked="checked"><span></span>
+                </div>
+              </div>Wheel Nuts
+            </label>
+            <textarea placeholder="Wheel Nuts" class="app-input hide"></textarea>
+          </li>
+          <li>
+            <label>
+              <div class="pull-right">
+                <div class="checkbox-helper">
+                  <input type="checkbox" checked="checked"><span></span>
+                </div>
+              </div>Indicators
+            </label>
+            <textarea placeholder="Indicators" class="app-input hide"></textarea>
+          </li>
+          <li>
+            <label>
+              <div class="pull-right">
+                <div class="checkbox-helper">
+                  <input type="checkbox" checked="checked"><span></span>
+                </div>
+              </div>Side/Headlights
+            </label>
+            <textarea placeholder="Side/Headlights" class="app-input hide"></textarea>
+          </li>
+          <li>
+            <label>
+              <div class="pull-right">
+                <div class="checkbox-helper">
+                  <input type="checkbox" checked="checked"><span></span>
+                </div>
+              </div>Wipers and Washers
+            </label>
+            <textarea placeholder="Wipers and Washers" class="app-input hide"></textarea>
+          </li>
+          <li>
+            <label>
+              <div class="pull-right">
+                <div class="checkbox-helper">
+                  <input type="checkbox" checked="checked"><span></span>
+                </div>
+              </div>Windscreen
+            </label>
+            <textarea placeholder="Windscreen" class="app-input hide"></textarea>
+          </li>
+          <li>
+            <label>
+              <div class="pull-right">
+                <div class="checkbox-helper">
+                  <input type="checkbox" checked="checked"><span></span>
+                </div>
+              </div>Loading aids
+            </label>
+            <textarea placeholder="Loading aids" class="app-input hide"></textarea>
+          </li>
+          <li>
+            <label>
+              <div class="pull-right">
+                <div class="checkbox-helper">
+                  <input type="checkbox" checked="checked"><span></span>
+                </div>
+              </div>Body Damage
+            </label>
+            <textarea placeholder="Body Damage" class="app-input hide"></textarea>
+          </li>
+          <li>
+            <label>
+              <div class="pull-right">
+                <div class="checkbox-helper">
+                  <input type="checkbox" checked="checked"><span></span>
+                </div>
+              </div>Tyres
+            </label>
+            <textarea placeholder="Tyres" class="app-input hide"></textarea>
+          </li>
+          <li>
+            <label>
+              <div class="pull-right">
+                <div class="checkbox-helper">
+                  <input type="checkbox" checked="checked"><span></span>
+                </div>
+              </div>Wheel Nuts
+            </label>
+            <textarea placeholder="Wheel Nuts" class="app-input hide"></textarea>
+          </li>
+          <li>
+            <label>
+              <div class="pull-right">
+                <div class="checkbox-helper">
+                  <input type="checkbox" checked="checked"><span></span>
+                </div>
+              </div>Indicators
+            </label>
+            <textarea placeholder="Indicators" class="app-input hide"></textarea>
+          </li>
+          <li>
+            <label>
+              <div class="pull-right">
+                <div class="checkbox-helper">
+                  <input type="checkbox" checked="checked"><span></span>
+                </div>
+              </div>Side/Headlights
+            </label>
+            <textarea placeholder="Side/Headlights" class="app-input hide"></textarea>
+          </li>
+          <li>
+            <label>
+              <div class="pull-right">
+                <div class="checkbox-helper">
+                  <input type="checkbox" checked="checked"><span></span>
+                </div>
+              </div>Wipers and Washers
+            </label>
+            <textarea placeholder="Wipers and Washers" class="app-input hide"></textarea>
+          </li>
+          <li>
+            <label>
+              <div class="pull-right">
+                <div class="checkbox-helper">
+                  <input type="checkbox" checked="checked"><span></span>
+                </div>
+              </div>Windscreen
+            </label>
+            <textarea placeholder="Windscreen" class="app-input hide"></textarea>
+          </li>
+          <li>
+            <label>
+              <div class="pull-right">
+                <div class="checkbox-helper">
+                  <input type="checkbox" checked="checked"><span></span>
+                </div>
+              </div>Loading aids
+            </label>
+            <textarea placeholder="Loading aids" class="app-input hide"></textarea>
+          </li>
+        </ul>
+        <div class="app-section app-button green"><i class="icon-upload-cloud"></i> Send Checklist</div>
+      </div>
+    </div>
+    <div data-page="settings" class="app-page">
+      <div class="app-topbar">
+        <div data-back="main" class="app-button left"></div>
+        <div class="app-title">Settings</div>
+      </div>
+      <div class="app-content">
+        <ul class="app-list">
+          <label>DTCO</label>
+          <li>DTCO Version<span class="pull-right">2.1</span></li>
+          <li>Remote Control Enamled<span class="pull-right">Yes</span></li>
+          <li>DTCO in VRN<span class="pull-right">VS TCO 1381</span></li>
+          <label>SmartLink</label>
+          <li>Firmware Version<span class="pull-right">1.3.0</span></li>
+          <li>Date of last Firmware Update<span class="pull-right">29/03/2014</span></li>
+          <li>Firmware Date<span class="pull-right">25/03/2014</span></li>
+          <li>Firmware Update<span class="pull-right"><a href="">Avaliable</a></span></li>
+          <li>PIN<span class="pull-right">221665</span></li>
+          <li>Serial number<span class="pull-right">007297</span></li>
+          <label>TIS-WEB</label>
+          <li>Transfer GPS data regulary<span class="pull-right">
+              <input type="checkbox" checked="checked" class="pe-lg pe-va"></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="app-bottombar">
+      <ul class="app-list js-updates">
+        <label>SmartLink<span class="pull-right">v.1.3.0</span></label>
+        <li class="green js-drivercard-update"><i class="icon-upload-cloud"></i>Driver Card<span class="pull-right"><a href="">Upload to Server</a></span></li>
+        <li class="red js-firmware-update"><i class="icon-install"></i>Firmware Update<span class="pull-right"><a href="">Install v.1.3.5</a></span></li>
+      </ul>
+      <div class="footer">
+        <div class="status-bar">
+          <div class="status pull-right">
+            <div class="item"><i class="icon-steering-wheel pe-va"></i>2:35</div>
+            <div class="item"><i class="icon-lodging pe-va"></i>3:15</div>
+            <div class="item"><i class="icon-attention pe-lg pe-va js-smartlink-status"></i></div>
+          </div>
+          <div class="name js-driver-status"><i class="icon-steering-wheel"></i> VS TCO 1381</div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/vendors.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
