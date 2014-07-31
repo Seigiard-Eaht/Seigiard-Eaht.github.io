@@ -15,15 +15,15 @@
       background: #fefefe;
       padding: 2em;
     }
-    #frame {
+    .screen, #frame {
       width: 320px;
       height: 568px;
       margin: 15px auto;
       display: block;
-      background: none;
+      background: #000;
       border: 1px solid #9a9a9a;
     }
-    #iphone {
+    .iphone {
       width: 340px;
       margin: 0 auto;
       border: 1px solid #9a9a9a;
@@ -31,6 +31,9 @@
       border-radius: 25px;
       position: relative;
       padding: 15px 5px;
+    }
+    .iphone-long {
+      padding-bottom: 80px;
     }
     .lens {
       display: block;
@@ -56,13 +59,61 @@
       border-radius: 25px;
     }
     </style>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <link href="fotorama/fotorama.css" rel="stylesheet">
+    <script src="fotorama/fotorama.js"></script>
   </head>
   <body>
-    <div id="iphone">
-      <div class="lens"></div>
-      <div class="speaker"></div>
-      <iframe src="app.html" id="frame"></iframe>
-      <div class="button"></div>
-    </div>
+    <table width="100%">
+      <tr>
+        <td width="50%">
+          <div class="iphone">
+            <div class="lens"></div>
+            <div class="speaker"></div>
+            <iframe src="app.html" id="frame"></iframe>
+            <div class="button"></div>
+          </div>
+        </td>
+        <td width="50%">
+
+          <div class="iphone iphone-long">
+            <div class="speaker"></div>
+            <div class="screen">
+              <div class="fotorama"
+                data-width="320" data-height="568" data-nav="thumbs" data-fit="contain"
+                data-thumbwidth="40" data-thumbheight="71" data-hash="true"
+              >
+                <img src="images/Android/1.Splashscreen.jpg">
+                <img src="images/Android/1.Splashscreen.jpg">
+                <img src="images/Android/2.Login.jpg">
+                <img src="images/Android/3.LatestVersion.jpg">
+                <img src="images/Android/5.1.MainMenu.jpg">
+                <img src="images/Android/6.1.Messaging.jpg">
+                <img src="images/Android/6.2.1.WriteMessage.jpg">
+                <img src="images/Android/6.2.2.SentMessages.jpg">
+                <img src="images/Android/7.2.SmartlinkConnection-status.jpg">
+                <img src="images/Android/8.1.VdoCounter-current.jpg">
+                <img src="images/Android/8.2.VdoCounter-menu.jpg">
+                <img src="images/Android/8.3.VdoCounter-daily.jpg">
+                <img src="images/Android/8.4.VdoCounter-weekly.jpg">
+                <img src="images/Android/8.5.VdoReminder.jpg">
+                <img src="images/Android/9.1.VehicleCheck.jpg">
+                <img src="images/Android/9.2.VehicleCheck-list.jpg">
+                <img src="images/Android/9.3.1.VehicleCheck-comment.jpg">
+                <img src="images/Android/9.3.5.VehicleCheck-info.jpg">
+                <img src="images/Android/10.1.Calendar.jpg">
+                <img src="images/Android/11.1.RemoteControl.jpg">
+                <img src="images/Android/11.2.RemoteControl-menu.jpg">
+                <img src="images/Android/11.3.RemoteControl-printer.jpg">
+                <img src="images/Android/12.Settings.DTCO.jpg">
+                <img src="images/Android/13.Settings.SmartLink.jpg">
+                <img src="images/Android/13.Settings.TIS-WEB.jpg">
+                <img src="images/Android/14.RateApp.jpg">
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
