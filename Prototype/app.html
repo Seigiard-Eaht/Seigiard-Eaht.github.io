@@ -41,6 +41,11 @@
       </div>
       <div class="app-content">
         <div class="driver-info"><span class="pull-right">VS TCO 1381<i class="icon-bus"></i></span><i class="icon-user"></i>Sergey Seletsky</div>
+        <div class="togglebar group">
+          <div class="button w33 active">Current</div>
+          <div class="button w33">Daily</div>
+          <div class="button w33">Weekly</div>
+        </div>
         <div class="vdo-screen"><img src="images/vdo.png"></div>
       </div>
     </div>
@@ -112,6 +117,10 @@
         <div class="app-title">Messages</div>
       </div>
       <div class="app-content">
+        <div class="togglebar group">
+          <div class="button w50 active">Inbox</div>
+          <div class="button w50">Outbox</div>
+        </div>
         <div data-target="message-new" class="app-section app-button green"><i class="icon-pencil"></i> New message</div>
         <ul class="app-list">
           <label>20 Jun 2014</label>
@@ -212,11 +221,12 @@
       </div>
       <div class="app-content">
         <ul class="app-list">
+          <li><span class="pull-right">Sergey Seletsky</span>Driver</li>
           <li><span class="pull-right">FIN110000000664600</span>Card Number</li>
         </ul>
         <div class="calendar-nav">
-          <button class="pull-left" disabled><i class="icon-left-open-big"></i></button>
-          <button class="pull-right" disabled><i class="icon-right-open-big"></i></button>
+          <button disabled="disabled" class="pull-left"><i class="icon-left-open-big"></i></button>
+          <button disabled="disabled" class="pull-right"><i class="icon-right-open-big"></i></button>
           <div class="month">June</div>
         </div>
         <ul class="calendar">
@@ -265,6 +275,7 @@
       </div>
       <div class="app-content">
         <ul class="app-list">
+          <li><span class="pull-right">Sergey Seletsky</span>Driver</li>
           <li><span class="pull-right">FIN110000000664600</span>Card Number</li>
           <li><span class="pull-right">1177 → 1131</span>Odometer</li>
           <li><span class="pull-right">CH → CH</span>Country</li>
@@ -328,7 +339,7 @@
       <div class="app-content">
         <div class="reminder js-reminder-on">
           <div class="app-section app-button green">Change</div>
-          <h3><i class="icon-bus"></i>KH12123</h3>
+          <h3>VS TCO 1381</h3>
         </div>
         <ul class="app-list checklist">
           <label>Checklist</label>
@@ -505,7 +516,7 @@
         <ul class="app-list">
           <label>DTCO</label>
           <li>DTCO Version<span class="pull-right">2.1</span></li>
-          <li>Remote Control Enamled<span class="pull-right">Yes</span></li>
+          <li>Remote Control Enabled<span class="pull-right">Yes</span></li>
           <li>DTCO in VRN<span class="pull-right">VS TCO 1381</span></li>
           <label>SmartLink</label>
           <li>Firmware Version<span class="pull-right">1.3.0</span></li>
@@ -515,8 +526,7 @@
           <li>PIN<span class="pull-right">221665</span></li>
           <li>Serial number<span class="pull-right">007297</span></li>
           <label>TIS-WEB</label>
-          <li>Transfer GPS data regulary<span class="pull-right">
-              <input type="checkbox" checked="checked" class="pe-lg pe-va"></span></li>
+          <li>Transfer GPS data regulary<a href="" class="pull-right">Yes</a></li>
         </ul>
       </div>
     </div>
