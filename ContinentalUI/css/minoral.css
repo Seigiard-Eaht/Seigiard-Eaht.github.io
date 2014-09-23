@@ -8468,8 +8468,9 @@ a small {
 @media only screen and (max-width: 1160px) {
   /* navbar */
   body .navbar .search {
-    width: 20%;
-    margin-left: 5%; }
+      margin: 0 20px;
+      max-width:200px;
+  }
 
   /*submenu*/
   .submenu h1 {
@@ -8566,7 +8567,7 @@ a small {
 @media only screen and (max-width: 920px) {
   /* navbar */
   body .navbar .search {
-    width: 17%; }
+      max-width:100px; }
     body .navbar .search input {
       font-size: 11px; }
   body .navbar .user-controls ul li a {
@@ -8978,3 +8979,12 @@ a small {
       display: block;
       text-align: center;
       float: none !important; } }
+
+
+.main h2.thin.disabled {
+    color: #aaa;
+}
+.main h2.thin + p.little-thin {
+    margin: -.7em 0 1.5em 2.5em;
+    color: #999;
+}
