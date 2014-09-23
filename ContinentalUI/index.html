@@ -9,6 +9,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/rickshaw.min.css">
     <link rel="stylesheet" href="css/bootstrap-checkbox.css">
@@ -613,19 +614,28 @@
             </div -->
             <!-- /submenu -->
 
-
             <!-- content main container -->
             <div class="main">
 
-                <!-- cards -->
-                <div class="row cards">
+                <h2 class="thin">
+                    <small><i class="fa fa-toggle-on"></i></small> <strong><a href="index.html">Admin</a></strong> module
+                </h2>
+                <p class="little-thin"><strong>v.4.2</strong>&nbsp; expiries at 31/05/2015</p>
 
-                    <div class="card-container col-lg-3 col-md-6 col-sm-12">
-                        <div class="card card-red hover">
-                            <div class="front">
-                                <h1>New Users</h1>
 
-                                <p id="users-count">0</p>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <h4>Fleet Information</h4>
+
+                        <!-- cards -->
+                        <div class="row cards">
+
+                            <div class="card-container col-lg-6 col-md-6 col-sm-12">
+                                <div class="card card-red hover">
+                                    <div class="front">
+                                        <h1>New Drivers</h1>
+
+                                        <p id="users-count">0</p>
                                         <span class="fa-stack fa-2x pull-right">
                                           <i class="fa fa-circle fa-stack-2x"></i>
                                           <i class="fa fa-user fa-stack-1x"></i>
@@ -634,136 +644,151 @@
                                                 data-bar-color="white" data-scale-color="false"
                                                 data-track-color="rgba(0, 0, 0, 0.15)"></span>
                                         </span>
+                                    </div>
+                                    <div class="back">
+                                        <ul class="inline divided">
+                                            <li>
+                                                <h1>Total Drivers</h1>
+
+                                                <p>3541</p>
+                                            </li>
+                                            <li>
+                                                <h1>Last Month</h1>
+
+                                                <p>698</p>
+                                            </li>
+                                        </ul>
+                                        <div class="summary negative">13% <i class="fa fa-arrow-down"></i> this month</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="back">
-                                <ul class="inline divided">
-                                    <li>
-                                        <h1>Total Users</h1>
 
-                                        <p>3541</p>
-                                    </li>
-                                    <li>
-                                        <h1>Last Month</h1>
+                            <div class="card-container col-lg-6 col-md-6 col-sm-12">
+                                <div class="card card-cyan hover">
+                                    <div class="front">
+                                        <h1>New Vehicles</h1>
 
-                                        <p>698</p>
-                                    </li>
-                                </ul>
-                                <div class="summary negative">13% <i class="fa fa-arrow-down"></i> this month</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card-container col-lg-3 col-md-6 col-sm-12">
-                        <div class="card card-cyan hover">
-                            <div class="front">
-                                <h1>New Orders</h1>
-
-                                <p id="orders-count">0</p>
+                                        <p id="orders-count">0</p>
                                         <span class="fa-stack fa-2x pull-right">
                                           <i class="fa fa-circle fa-stack-2x"></i>
-                                          <i class="fa fa-shopping-cart fa-stack-1x"></i>
+                                          <i class="fa fa-truck fa-stack-1x"></i>
                                           <span class="easypiechart" data-percent="55" data-line-width="4" data-size="80"
                                                 data-line-cap="butt" data-animate="2000" data-target="#orders-count" data-update="3000"
                                                 data-bar-color="white" data-scale-color="false"
                                                 data-track-color="rgba(0, 0, 0, 0.15)"></span>
                                         </span>
-                            </div>
-                            <div class="back">
-                                <ul class="inline divided">
-                                    <li>
-                                        <h1>Total Orders</h1>
+                                    </div>
+                                    <div class="back">
+                                        <ul class="inline divided">
+                                            <li>
+                                                <h1>Total Vehicles</h1>
 
-                                        <p>842</p>
-                                    </li>
-                                    <li>
-                                        <h1>Last Month</h1>
+                                                <p>842</p>
+                                            </li>
+                                            <li>
+                                                <h1>Last Month</h1>
 
-                                        <p>151</p>
-                                    </li>
-                                </ul>
-                                <div class="summary positive">6% <i class="fa fa-arrow-up"></i> this month</div>
+                                                <p>151</p>
+                                            </li>
+                                        </ul>
+                                        <div class="summary positive">6% <i class="fa fa-arrow-up"></i> this month</div>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
+                        <!-- /cards -->
                     </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <h4>Archive Information</h4>
 
+                        <!-- cards -->
+                        <div class="row cards">
 
-                    <div class="card-container col-lg-3 col-md-6 col-sm-12">
-                        <div class="card card-green hover">
-                            <div class="front">
-                                <h1>Sales</h1>
+                            <div class="card-container col-lg-6 col-md-6 col-sm-12">
+                                <div class="card card-green hover">
+                                    <div class="front">
+                                        <h1>Driver Card</h1>
 
-                                <p id="sales-count">0</p>
+                                        <p id="sales-count">0</p>
                                         <span class="fa-stack fa-2x pull-right">
                                           <i class="fa fa-circle fa-stack-2x"></i>
-                                          <i class="fa fa-usd fa-stack-1x"></i>
+                                          <i class="fa fa-cloud-upload fa-stack-1x"></i>
                                           <span class="easypiechart" data-percent="30" data-line-width="4" data-size="80"
                                                 data-line-cap="butt" data-animate="2000" data-target="#sales-count" data-update="3000"
                                                 data-bar-color="white" data-scale-color="false"
                                                 data-track-color="rgba(0, 0, 0, 0.15)"></span>
                                         </span>
+                                    </div>
+                                    <div class="back">
+                                        <ul class="inline divided">
+                                            <li>
+                                                <h1>Total Uploads</h1>
+
+                                                <p>25,165</p>
+                                            </li>
+                                            <li>
+                                                <h1>Last Month</h1>
+
+                                                <p>3,154</p>
+                                            </li>
+                                        </ul>
+                                        <div class="summary positive">18% <i class="fa fa-arrow-up"></i> this month</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="back">
-                                <ul class="inline divided">
-                                    <li>
-                                        <h1>Total Sales</h1>
-
-                                        <p>25,165</p>
-                                    </li>
-                                    <li>
-                                        <h1>Last Month</h1>
-
-                                        <p>3,154</p>
-                                    </li>
-                                </ul>
-                                <div class="summary positive">18% <i class="fa fa-arrow-up"></i> this month</div>
-                            </div>
-                        </div>
-                    </div>
 
 
-                    <div class="card-container col-lg-3 col-md-6 col-sm-12">
-                        <div class="card card-orange hover">
-                            <div class="front">
-                                <h1>Visits</h1>
+                            <div class="card-container col-lg-6 col-md-6 col-sm-12">
+                                <div class="card card-orange hover">
+                                    <div class="front">
+                                        <h1>Vehicle Unit</h1>
 
-                                <p id="visits-count">0</p>
+                                        <p id="visits-count">0</p>
                                         <span class="fa-stack fa-2x pull-right">
                                           <i class="fa fa-circle fa-stack-2x"></i>
-                                          <i class="fa fa-eye fa-stack-1x"></i>
+                                          <i class="fa fa-upload fa-stack-1x"></i>
                                           <span class="easypiechart" data-percent="90" data-line-width="4" data-size="80"
                                                 data-line-cap="butt" data-animate="2000" data-target="#visits-count" data-update="3000"
                                                 data-bar-color="white" data-scale-color="false"
                                                 data-track-color="rgba(0, 0, 0, 0.15)"></span>
                                         </span>
-                            </div>
-                            <div class="back">
-                                <ul class="inline divided">
-                                    <li>
-                                        <h1>Total Visits</h1>
+                                    </div>
+                                    <div class="back">
+                                        <ul class="inline divided">
+                                            <li>
+                                                <h1>Total Uploads</h1>
 
-                                        <p>48,694</p>
-                                    </li>
-                                    <li>
-                                        <h1>Last Month</h1>
+                                                <p>48,694</p>
+                                            </li>
+                                            <li>
+                                                <h1>Last Month</h1>
 
-                                        <p>9,514</p>
-                                    </li>
-                                </ul>
-                                <div class="summary negative">2% <i class="fa fa-arrow-down"></i> this month</div>
+                                                <p>9,514</p>
+                                            </li>
+                                        </ul>
+                                        <div class="summary negative">2% <i class="fa fa-arrow-down"></i> this month</div>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
+                        <!-- /cards -->
                     </div>
-
                 </div>
-                <!-- /cards -->
 
+
+                <h2 class="thin">
+                    <small><i class="fa fa-toggle-on"></i></small> <strong><a href="index.html">Microbilling</a></strong> module
+                </h2>
+                <p class="little-thin"><strong>v.1.0.2</strong>&nbsp; expiries at 12/07/2015</p>
 
                 <!-- row -->
                 <div class="row">
 
 
                     <!-- col 8 -->
-                    <div class="col-lg-8 col-md-12">
+                    <div class="col-lg-12 col-md-12">
 
 
                         <!-- tile -->
@@ -776,7 +801,7 @@
 
                                 <div class="controls">
                                     <a href="index.html#" class="refresh"><i class="fa fa-refresh"></i></a>
-                                    <a href="index.html#" class="remove"><i class="fa fa-times"></i></a>
+                                    
                                 </div>
                             </div>
                             <!-- /tile header -->
@@ -829,78 +854,25 @@
 
                                         </li>
                                         <li class="col-md-4 col-sm-12 col-xs-12">
-                                            <h5 class="underline">Visitors Statistics</h5>
-                                            <ul class="progress-list">
-                                                <li>
-                                                    <div class="details">
-                                                        <div class="title">America</div>
-                                                        <div class="description">Visitors from America</div>
+                                            <!-- tile -->
+                                            <section class="center-block">
+
+
+                                                <!-- tile header -->
+                                                <div class="tile-header">
+                                                    <div class="controls">
+                                                        <a href="index.html#" class="refresh"><i class="fa fa-refresh"></i></a>
                                                     </div>
-                                                    <div class="status pull-right">
-                                                        <span class="animate-number" data-value="40" data-animation-duration="1500">0</span>%
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="progress progress-little no-radius">
-                                                        <div class="progress-bar progress-bar-green animate-progress-bar" data-percentage="40%"
-                                                             style="width: 0%;"></div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="details">
-                                                        <div class="title">Europe</div>
-                                                        <div class="description">Visitors from Europe</div>
-                                                    </div>
-                                                    <div class="status pull-right">
-                                                        <span class="animate-number" data-value="38" data-animation-duration="1000">0</span>%
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="progress progress-little no-radius">
-                                                        <div class="progress-bar progress-bar-cyan animate-progress-bar" data-percentage="35%"
-                                                             style="width: 0%;"></div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="details">
-                                                        <div class="title">Asia</div>
-                                                        <div class="description">Visitors from Asia</div>
-                                                    </div>
-                                                    <div class="status pull-right">
-                                                        <span class="animate-number" data-value="12" data-animation-duration="800">0</span>%
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="progress progress-little no-radius">
-                                                        <div class="progress-bar progress-bar-amethyst animate-progress-bar" data-percentage="12%"
-                                                             style="width: 0%;"></div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="details">
-                                                        <div class="title">Africa</div>
-                                                        <div class="description">Visitors from Africa</div>
-                                                    </div>
-                                                    <div class="status pull-right">
-                                                        <span class="animate-number" data-value="7" data-animation-duration="600">0</span>%
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="progress progress-little no-radius">
-                                                        <div class="progress-bar progress-bar-orange animate-progress-bar" data-percentage="7%"
-                                                             style="width: 0%;"></div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="details">
-                                                        <div class="title">Other</div>
-                                                    </div>
-                                                    <div class="status pull-right">
-                                                        <span class="animate-number" data-value="6" data-animation-duration="400">0</span>%
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="progress progress-little no-radius">
-                                                        <div class="progress-bar progress-bar-red animate-progress-bar" data-percentage="6%"
-                                                             style="width: 0%;"></div>
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                                </div>
+                                                <!-- /tile header -->
+
+                                                <!-- tile body -->
+                                                <div class="tile-body">
+                                                    <div id="morris-donut-example" style="height: 250px;"></div>
+                                                </div>
+                                                <!-- /tile body -->
+                                            </section>
+                                            <!-- /tile -->
                                         </li>
                                     </ul>
                                 </div>
@@ -910,156 +882,13 @@
                         </section>
                         <!-- /tile -->
 
-
-                        <!-- tile -->
-                        <section class="tile cornered">
-
-
-                            <!-- tile header -->
-                            <div class="tile-header">
-                                <h1><strong>Projects</strong> Progress</h1>
-
-                                <div class="controls">
-                                    <a href="index.html#" class="refresh"><i class="fa fa-refresh"></i></a>
-                                    <a href="index.html#" class="remove"><i class="fa fa-times"></i></a>
-                                </div>
-                            </div>
-                            <!-- /tile header -->
-
-
-                            <!-- tile body -->
-                            <div class="tile-body nopadding">
-                                <div class="table-responsive">
-                                    <table class="table table-hover">
-                                        <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Graphic Layout for client</td>
-                                            <td class="red-text little-bold uppercase">High priority</td>
-                                            <td><span class="badge badge-red">50%</span></td>
-                                            <td class="text-right"><span id="projectbar1">87,85,42,90,70,55,82,68</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Make website responsive</td>
-                                            <td class="green-text little-bold uppercase">Low priority</td>
-                                            <td><span class="badge badge-green">13%</span></td>
-                                            <td class="text-right"><span id="projectbar2">87,99,52,93,42,86,51,93</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Clean css/html/js code</td>
-                                            <td class="red-text little-bold uppercase">High priority</td>
-                                            <td><span class="badge badge-red">76%</span></td>
-                                            <td class="text-right"><span id="projectbar3">74,77,82,91,69,63,46,42</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Database Optimization</td>
-                                            <td class="orange-text little-bold uppercase">Normal priority</td>
-                                            <td><span class="badge badge-orange">38%</span></td>
-                                            <td class="text-right"><span id="projectbar4">52,45,76,74,77,57,65,86</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>Database Migration</td>
-                                            <td class="green-text little-bold uppercase">Low priority</td>
-                                            <td><span class="badge badge-green">9%</span></td>
-                                            <td class="text-right"><span id="projectbar5">53,70,47,96,62,49,69,55</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Email server backup</td>
-                                            <td class="orange-text little-bold uppercase">Normal priority</td>
-                                            <td><span class="badge badge-orange">29%</span></td>
-                                            <td class="text-right"><span id="projectbar6">69,80,85,96,67,58,75,82</span></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <!-- /tile body -->
-
-                        </section>
-                        <!-- /tile -->
-
-
                     </div>
-                    <!-- /col 8-->
-
-
-                    <!-- col 4 -->
-                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-
-
-                        <!-- tile -->
-                        <section class="tile color grey">
-
-
-                            <!-- tile header -->
-                            <div class="tile-header">
-                                <h1 class="big-thin">Server Load</h1>
-
-                                <div class="controls">
-                                    <a href="index.html#" class="refresh"><i class="fa fa-refresh"></i></a>
-                                    <a href="index.html#" class="remove"><i class="fa fa-times"></i></a>
-                                </div>
-                            </div>
-                            <!-- /tile header -->
-
-                            <!-- tile widget -->
-                            <div class="tile-widget">
-                                <h2><span class="animate-number" data-value="394" data-animation-duration="1600">0</span> GB</h2>
-
-                                <div class="progress progress-little no-radius nomargin">
-                                    <div class="progress-bar progress-bar-dutch animate-progress-bar" data-percentage="39%"
-                                         style="width: 0%;"></div>
-                                </div>
-                                <p class="description"><strong class="white-text">394GB</strong> used of <strong
-                                        class="white-text">2,048GB</strong> on File Server</p>
-                            </div>
-                            <!-- /tile widget -->
-
-
-                            <!-- tile body -->
-                            <div class="tile-body paddingtop">
-                                <div id="serverload-chart"></div>
-                            </div>
-                            <!-- /tile body -->
-
-                        </section>
-                        <!-- /tile -->
-
-                        <!-- tile -->
-                        <section class="tile cornered">
-
-
-                            <!-- tile header -->
-                            <div class="tile-header">
-                                <div class="controls">
-                                    <a href="index.html#" class="refresh"><i class="fa fa-refresh"></i></a>
-                                    <a href="index.html#" class="remove"><i class="fa fa-times"></i></a>
-                                </div>
-                            </div>
-                            <!-- /tile header -->
-
-                            <!-- tile body -->
-                            <div class="tile-body">
-                                <div id="morris-donut-example" style="height: 250px;"></div>
-                            </div>
-                            <!-- /tile body -->
-                        </section>
-                        <!-- /tile -->
-
-
-                    </div>
-                    <!-- /col 4 -->
-
-
                 </div>
-                <!-- /row -->
 
-
+                <h2 class="thin">
+                    <small><i class="fa fa-toggle-on"></i></small> <strong><a href="index.html">Communicator</a></strong> module
+                </h2>
+                <p class="little-thin"><strong>v.4.3.1</strong>&nbsp; expiries at 06/01/2016</p>
                 <!-- row -->
                 <div class="row">
 
@@ -1078,7 +907,7 @@
 
                                 <div class="controls">
                                     <a href="index.html#" class="refresh"><i class="fa fa-refresh"></i></a>
-                                    <a href="index.html#" class="remove"><i class="fa fa-times"></i></a>
+                                    
                                 </div>
                             </div>
                             <!-- /tile header -->
@@ -1088,11 +917,8 @@
                             <div class="tile-widget nopadding">
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-tabs tabdrop">
-                                    <li class="active"><a href="index.html#users-tab" data-toggle="tab"><i class="fa fa-users"></i></a></li>
-                                    <li><a href="index.html#orders-tab" data-toggle="tab"><i class="fa fa-shopping-cart"></i></a></li>
-                                    <li><a href="index.html#messages-tab" data-toggle="tab"><i class="fa fa-envelope"></i></a></li>
-                                    <li><a href="index.html#tasks-tab" data-toggle="tab"><i class="fa fa-tasks"></i></a></li>
-                                    <li><a href="index.html#comments-tab" data-toggle="tab"><i class="fa fa-comments"></i></a></li>
+                                    <li class="active"><a href="index.html#messages-tab" data-toggle="tab"><i class="fa fa-envelope"></i> Inbox</a></li>
+                                    <li><a href="index.html#comments-tab" data-toggle="tab"><i class="fa fa-send"></i> Outbox</a></li>
                                 </ul>
                                 <!-- / Nav tabs -->
                             </div>
@@ -1103,117 +929,8 @@
                             <div class="tile-body tab-content nopadding">
                             <!-- Tab panes -->
 
-                                <ul id="users-tab" class="tab-pane fade in active">
-                                    <li>
-                                        <span class="date">08.01.2014</span>
-                                        <span class="icon"><i class="fa fa-user fa-lg amethyst-text"></i></span>
-                                        <span class="subject">User <a href="index.html#" class="maincolor">Peter Kay</a> ubanned</span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                    <li>
-                                        <span class="date">08.01.2014</span>
-                                        <span class="icon"><i class="fa fa-user fa-lg amethyst-text"></i></span>
-                                        <span class="subject">User <a href="index.html#" class="maincolor">Arnold Karlsberg</a> ubanned</span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                    <li>
-                                        <span class="date">06.01.2014</span>
-                                        <span class="icon"><i class="fa fa-user fa-lg red-text"></i></span>
-                                        <span class="subject">User <a href="index.html#" class="maincolor">Arnold Karlsberg</a> banned</span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                    <li>
-                                        <span class="date">04.01.2014</span>
-                                        <span class="icon"><i class="fa fa-user fa-lg cyan-text"></i></span>
-                                        <span class="subject">User <a href="index.html#" class="maincolor">Ing. Imrich
-                                            Kamarel</a> has been updated</span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                    <li>
-                                        <span class="date">03.01.2014</span>
-                                        <span class="icon"><i class="fa fa-user fa-lg red-text"></i></span>
-                                        <span class="subject">New User <a href="index.html#" class="maincolor">Arnold Karlsberg</a> registered</span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                    <li>
-                                        <span class="date">30.12.2013</span>
-                                        <span class="icon"><i class="fa fa-user fa-lg red-text"></i></span>
-                                        <span class="subject">User <a href="index.html#" class="maincolor">Peter Kay</a> banned</span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                    <li>
-                                        <span class="date">27.12.2013</span>
-                                        <span class="icon"><i class="fa fa-user fa-lg green-text"></i></span>
-                                        <span class="subject">New user <a href="index.html#" class="maincolor">Peter Kay</a> registered</span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                    <li>
-                                        <span class="date">26.12.2013</span>
-                                        <span class="icon"><i class="fa fa-user fa-lg red-text"></i></span>
-                                        <span class="subject">User <a href="index.html#" class="maincolor">George McCain</a> banned</span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                    <li>
-                                        <span class="date">22.12.2013</span>
-                                        <span class="icon"><i class="fa fa-user fa-lg green-text"></i></span>
-                                        <span class="subject">New user <a href="index.html#" class="maincolor">Ing. Imrich Kamarel</a> registered</span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                </ul>
 
-                                <ul id="orders-tab" class="tab-pane fade">
-                                    <li>
-                                        <span class="date">01.01.2014</span>
-                                        <span class="icon"><i class="fa fa-shopping-cart fa-lg green-text"></i></span>
-                                        <span class="subject">User <a href="index.html#" class="maincolor">Arnold Karlsberg</a> make a new order for 116$ (<a
-                                                href="index.html#" class="maincolor">OR_00012014</a>)</span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                    <li>
-                                        <span class="date">23.12.2013</span>
-                                        <span class="icon"><i class="fa fa-shopping-cart fa-lg cyan-text"></i></span>
-                                        <span class="subject">User <a href="index.html#" class="maincolor">George McCain</a> change an order for 24$ (<a
-                                                href="index.html#" class="maincolor">OR_02172013</a>)</span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                    <li>
-                                        <span class="date">23.12.2013</span>
-                                        <span class="icon"><i class="fa fa-shopping-cart fa-lg green-text"></i></span>
-                                        <span class="subject">User <a href="index.html#" class="maincolor">George
-                                            McCain</a> make a new order for 24$ (<a href="index.html#" class="maincolor">OR_02172013</a>)</span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                    <li>
-                                        <span class="date">19.12.2013</span>
-                                        <span class="icon"><i class="fa fa-shopping-cart fa-lg red-text"></i></span>
-                                        <span class="subject">User <a href="index.html#" class="maincolor">Peter Kay</a> cancelled order for 312$ (<a
-                                                href="index.html#" class="maincolor">OR_02162013</a>)</span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                    <li>
-                                        <span class="date">18.12.2013</span>
-                                        <span class="icon"><i class="fa fa-shopping-cart fa-lg green-text"></i></span>
-                                        <span class="subject">User <a href="index.html#" class="maincolor">Peter Kay</a> make a new order for 312$ (<a
-                                                href="index.html#" class="maincolor">OR_02162013</a>)</span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                    <li>
-                                        <span class="date">14.12.2013</span>
-                                        <span class="icon"><i class="fa fa-shopping-cart fa-lg green-text"></i></span>
-                                        <span class="subject">User <a href="index.html#" class="maincolor">Ing. Imrich Kamarel</a> make a new order for 154$ (<a
-                                                href="index.html#" class="maincolor">OR_02152013</a>)</span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                    <li>
-                                        <span class="date">11.12.2013</span>
-                                        <span class="icon"><i class="fa fa-shopping-cart fa-lg green-text"></i></span>
-                                        <span class="subject">User <a href="index.html#" class="maincolor">Ing. Imrich Kamarel</a> make a new order for 65$ (<a
-                                                href="index.html#" class="maincolor">OR_02142013</a>)</span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                </ul>
-
-                                <ul id="messages-tab" class="tab-pane fade">
+                                <ul id="messages-tab" class="tab-pane fade in active">
                                     <li>
                                         <span class="date">06.01.2014</span>
                                         <span class="icon"><i class="fa fa-envelope fa-lg"></i></span>
@@ -1262,52 +979,6 @@
                                         <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
                                     </li>
                                 </ul>
-
-                                <ul id="tasks-tab" class="tab-pane fade">
-                                    <li>
-                                        <span class="date">24.12.2013</span>
-                                        <span class="icon"><i class="fa fa-tasks cyan-text fa-lg"></i></span>
-                                        <span class="subject">You finished task <a href="index.html#" class="maincolor">Get drunk</a></span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                    <li>
-                                        <span class="date">23.12.2013</span>
-                                        <span class="icon"><i class="fa fa-tasks red-text fa-lg"></i></span>
-                                        <span class="subject">You cancelled task <a href="index.html#" class="maincolor">Gifts!</a></span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                    <li>
-                                        <span class="date">22.12.2013</span>
-                                        <span class="icon"><i class="fa fa-tasks cyan-text fa-lg"></i></span>
-                                        <span class="subject">You finished task <a href="index.html#" class="maincolor">Make backup</a></span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                    <li>
-                                        <span class="date">21.12.2013</span>
-                                        <span class="icon"><i class="fa fa-tasks green-text fa-lg"></i></span>
-                                        <span class="subject">You have a new task <a href="index.html#" class="maincolor">Gifts!</a></span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                    <li>
-                                        <span class="date">19.12.2013</span>
-                                        <span class="icon"><i class="fa fa-tasks cyan-text fa-lg"></i></span>
-                                        <span class="subject">You finished task <a href="index.html#" class="maincolor">Send emails</a></span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                    <li>
-                                        <span class="date">18.12.2013</span>
-                                        <span class="icon"><i class="fa fa-tasks green-text fa-lg"></i></span>
-                                        <span class="subject">You have a new task <a href="index.html#" class="maincolor">Send emails</a></span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                    <li>
-                                        <span class="date">18.12.2013</span>
-                                        <span class="icon"><i class="fa fa-tasks green-text fa-lg"></i></span>
-                                        <span class="subject">You have a new task <a href="index.html#" class="maincolor">Make backup</a></span>
-                                        <span class="more pull-right"><i class="fa fa-caret-right"></i></span>
-                                    </li>
-                                </ul>
-
                                 <ul id="comments-tab" class="tab-pane fade">
                                     <li>
                                         <span class="date">06.01.2014</span>
@@ -1386,7 +1057,7 @@
 
                                 <div class="controls">
                                     <a href="index.html#" class="refresh"><i class="fa fa-refresh"></i></a>
-                                    <a href="index.html#" class="remove"><i class="fa fa-times"></i></a>
+                                    
                                 </div>
                             </div>
                             <!-- /tile header -->
@@ -1448,6 +1119,104 @@
                 <!-- /row -->
 
 
+                <h2 class="thin">
+                    <small><i class="fa fa-toggle-on"></i></small> <strong><a href="index.html">Project Managment</a></strong> module
+                </h2>
+                <p class="little-thin"><strong>v.0.0.1</strong>&nbsp; ß-test</p>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <!-- tile -->
+                        <section class="tile cornered">
+
+
+                            <!-- tile header -->
+                            <div class="tile-header">
+                                <h1><strong>Projects</strong> Progress</h1>
+
+                                <div class="controls">
+                                    <a href="index.html#" class="refresh"><i class="fa fa-refresh"></i></a>
+                                    
+                                </div>
+                            </div>
+                            <!-- /tile header -->
+
+
+                            <!-- tile body -->
+                            <div class="tile-body nopadding">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Graphic Layout for client</td>
+                                            <td class="red-text little-bold uppercase">High priority</td>
+                                            <td><span class="badge badge-red">50%</span></td>
+                                            <td class="text-right"><span id="projectbar1">87,85,42,90,70,55,82,68</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Make website responsive</td>
+                                            <td class="green-text little-bold uppercase">Low priority</td>
+                                            <td><span class="badge badge-green">13%</span></td>
+                                            <td class="text-right"><span id="projectbar2">87,99,52,93,42,86,51,93</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Clean css/html/js code</td>
+                                            <td class="red-text little-bold uppercase">High priority</td>
+                                            <td><span class="badge badge-red">76%</span></td>
+                                            <td class="text-right"><span id="projectbar3">74,77,82,91,69,63,46,42</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Database Optimization</td>
+                                            <td class="orange-text little-bold uppercase">Normal priority</td>
+                                            <td><span class="badge badge-orange">38%</span></td>
+                                            <td class="text-right"><span id="projectbar4">52,45,76,74,77,57,65,86</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Database Migration</td>
+                                            <td class="green-text little-bold uppercase">Low priority</td>
+                                            <td><span class="badge badge-green">9%</span></td>
+                                            <td class="text-right"><span id="projectbar5">53,70,47,96,62,49,69,55</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Email server backup</td>
+                                            <td class="orange-text little-bold uppercase">Normal priority</td>
+                                            <td><span class="badge badge-orange">29%</span></td>
+                                            <td class="text-right"><span id="projectbar6">69,80,85,96,67,58,75,82</span></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /tile body -->
+
+                        </section>
+                        <!-- /tile -->
+
+
+                    </div>
+                    <!-- /col 8-->
+
+
+                </div>
+                <!-- /row -->
+
+
+                <h2 class="thin disabled">
+                    <a class="pull-right btn btn-orange" href="index.html">Pay</a>
+                    <small><i class="fa fa-toggle-off"></i></small> <strong>Disabled</a></strong> module
+                </h2>
+                <p class="little-thin"><strong>v.1.0.8</strong>&nbsp; expiried at 10/03/2014</p>
+
+                <h2 class="thin disabled">
+                    <a class="pull-right btn btn-orange" href="index.html">Pay</a>
+                    <small><i class="fa fa-toggle-off"></i></small> <strong>Another Disabled</a></strong> module
+                </h2>
+                <p class="little-thin"><strong>v.3.9.1</strong>&nbsp; expiried at 08/12/2013</p>
             </div>
             <!-- /content container -->
 
@@ -1536,10 +1305,10 @@
         $('.pie-chart').easyPieChart();
 
         //animate numbers on cards
-        $("#users-count").animateNumbers(Math.round(Math.random() * 1000));
+        $("#users-count").animateNumbers(Math.round(Math.random() * 100));
         $("#orders-count").animateNumbers(Math.round(Math.random() * 100));
-        $("#sales-count").animateNumbers(Math.round(Math.random() * 10000));
-        $("#visits-count").animateNumbers(Math.round(Math.random() * 10000));
+        $("#sales-count").animateNumbers(Math.round(Math.random() * 10));
+        $("#visits-count").animateNumbers(Math.round(Math.random() * 10));
 
         //animate numbers with class .animate-number with data-value attribute
         $(".animate-number").each(function () {
@@ -1560,10 +1329,10 @@
         window.setInterval(function () {
 
             //animate numbers on cards
-            $('#users-count').animateNumbers(Math.round(Math.random() * 1000));
+            $('#users-count').animateNumbers(Math.round(Math.random() * 100));
             $('#orders-count').animateNumbers(Math.round(Math.random() * 100));
-            $('#sales-count').animateNumbers(Math.round(Math.random() * 10000));
-            $('#visits-count').animateNumbers(Math.round(Math.random() * 10000));
+            $('#sales-count').animateNumbers(Math.round(Math.random() * 10));
+            $('#visits-count').animateNumbers(Math.round(Math.random() * 10));
 
             //refresh every pie chart
             $('.easypiechart').each(function () {
@@ -1571,48 +1340,6 @@
             });
 
         }, 5000);
-
-        //server load rickshaw chart
-        var graph;
-
-        var seriesData = [
-            [],
-            []
-        ];
-        var random = new Rickshaw.Fixtures.RandomData(50);
-
-        for (var i = 0; i < 50; i++) {
-            random.addData(seriesData);
-        }
-
-        graph = new Rickshaw.Graph({
-            element: document.querySelector("#serverload-chart"),
-            height: 150,
-            renderer: 'area',
-            series: [
-                {
-                    data: seriesData[0],
-                    color: '#1693A5',
-                    name: 'File Server'
-                },
-                {
-                    data: seriesData[1],
-                    color: '#e2e2e2',
-                    name: 'Mail Server'
-                }
-            ]
-        });
-
-        var hoverDetail = new Rickshaw.Graph.HoverDetail({
-            graph: graph,
-        });
-
-        setInterval(function () {
-            random.removeData(seriesData);
-            random.addData(seriesData);
-            graph.update();
-
-        }, 1000);
 
         //sparkline charts
         $('#projectbar1').sparkline('html', {type: 'bar', barColor: '#22beef', barWidth: 4, height: 20});
