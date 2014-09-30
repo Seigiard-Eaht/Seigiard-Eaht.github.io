@@ -915,7 +915,7 @@
     </ul>
 
                 <div class="row">
-    <div class="col-lg-6 col-md-12 col-sm-12 tile">
+    <div class="col-lg-12 col-md-12 col-sm-12 tile">
         <!-- tile header -->
         <div class="tile-header transparent">
             <h1><strong>Fleet</strong> Information</h1>
@@ -925,7 +925,7 @@
         <!-- cards -->
         <div class="row cards">
 
-            <div class="card-container col-lg-6 col-md-6 col-sm-12">
+            <div class="card-container col-lg-4 col-md-6 col-sm-12 col-lg-push-1">
                 <div class="card card-white hover">
                     <div class="front new-units">
                         <ul class="inline divided">
@@ -956,7 +956,7 @@
                 </div>
             </div>
 
-            <div class="card-container col-lg-6 col-md-6 col-sm-12">
+            <div class="card-container col-lg-4 col-md-6 col-sm-12 col-lg-push-3">
                 <div class="card card-red hover">
                     <div class="front">
                         <h1>Vehicle Check</h1>
@@ -991,7 +991,7 @@
         </div>
         <!-- /cards -->
     </div>
-    <div class="col-lg-6 col-md-12 col-sm-12 tile">
+    <div class="col-lg-12 col-md-12 col-sm-12 tile">
         <!-- tile header -->
         <div class="tile-header transparent">
             <h1><strong>Archive</strong> Information</h1>
@@ -1000,7 +1000,7 @@
         <!-- cards -->
         <div class="row cards">
 
-            <div class="card-container col-lg-6 col-md-6 col-sm-12">
+            <div class="card-container col-lg-4 col-md-4 col-sm-12">
                 <div class="card card-green hover">
                     <div class="front">
                         <h1>
@@ -1034,7 +1034,7 @@
             </div>
 
 
-            <div class="card-container col-lg-6 col-md-6 col-sm-12">
+            <div class="card-container col-lg-4 col-md-4 col-sm-12">
                 <div class="card card-orange hover">
                     <div class="front">
                         <h1>Vehicle Unit Upload</h1>
@@ -1067,10 +1067,7 @@
                 </div>
             </div>
 
-        </div>
-        <div class="row cards">
-
-            <div class="card-container col-lg-6 col-md-6 col-sm-12">
+            <div class="card-container col-lg-4 col-md-4 col-sm-12">
                 <div class="card card-cyan hover">
                     <div class="front">
                         <h1>
@@ -1427,46 +1424,46 @@
                 <tr>
                     <th></th>
                     <th style="color : #cd97eb;">Max Load</th>
-                    <th style="color : #a2d200;">Min Load</th>
                     <th style="color : #00A185;">Average Load</th>
+                    <th style="color : #a2d200;">Min Load</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <th>25.09</th>
                     <td>356</td>
-                    <td>212</td>
                     <td>284</td>
+                    <td>212</td>
                 </tr>
                 <tr>
                     <th>26.09</th>
                     <td>684</td>
-                    <td>128</td>
                     <td>412</td>
+                    <td>128</td>
                 </tr>
                 <tr>
                     <th>27.09</th>
                     <td>692</td>
-                    <td>163</td>
                     <td>426</td>
+                    <td>163</td>
                 </tr>
                 <tr>
                     <th>28.09</th>
                     <td>987</td>
-                    <td>354</td>
                     <td>687</td>
+                    <td>354</td>
                 </tr>
                 <tr>
                     <th>29.09</th>
                     <td>1865</td>
-                    <td>985</td>
                     <td>1364</td>
+                    <td>985</td>
                 </tr>
                 <tr>
                     <th>30.09</th>
                     <td>2158</td>
-                    <td>1214</td>
                     <td>1702</td>
+                    <td>1214</td>
                 </tr>
                 </tbody>
             </table>
@@ -1548,12 +1545,6 @@
         //generate actual pie charts
         //$('.pie-chart').easyPieChart();
 
-        //animate numbers on cards
-//        $("#users-count").animateNumbers(Math.round(Math.random() * 100));
-//        $("#orders-count").animateNumbers(Math.round(Math.random() * 100));
-
-//        $("#sales-count").animateNumbers(Math.round(Math.random() * 10));
-//        $("#visits-count").animateNumbers(Math.round(Math.random() * 10));
 
         $('#sparkline02').sparkline([2,52], {
             type: 'pie',
