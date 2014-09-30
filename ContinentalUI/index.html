@@ -31,14 +31,26 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/plugins/gmaps/markerclusterer.min.js"></script>
+    <script src="js/plugins/gmaps/jquery.ui.map.full.min.js"></script>
 
     <script src="js/plugins/jquery.nicescroll.min.js"></script>
 
     <script src="js/plugins/blockui/jquery.blockUI.js"></script>
 
     <script src="js/plugins/jquery.easypiechart.min.js"></script>
+    <script src="js/plugins/justgage/justgage.js"></script>
+
+    <script src="js/plugins/flot/jquery.flot.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.categories.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.stack.min.js"></script>
+    <script src="js/plugins/graphtable/jquery.graphTable-0.3.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
 
     <script src="js/plugins/jquery.animateNumbers.js"></script>
 
@@ -914,19 +926,18 @@
         <div class="row cards">
 
             <div class="card-container col-lg-6 col-md-6 col-sm-12">
-                <div class="card card-red hover">
-                    <div class="front">
-                        <h1>New Drivers</h1>
-
-                        <p id="users-count">0</p>
-                                    <span class="fa-stack fa-2x pull-right">
-                                      <i class="fa fa-circle fa-stack-2x"></i>
-                                      <i class="fa fa-user fa-stack-1x"></i>
-                                      <span class="easypiechart" data-percent="100" data-line-width="4" data-size="80"
-                                            data-line-cap="butt" data-animate="2000" data-target="#users-count" data-update="3000"
-                                            data-bar-color="white" data-scale-color="false"
-                                            data-track-color="rgba(0, 0, 0, 0.15)"></span>
-                                    </span>
+                <div class="card card-white hover">
+                    <div class="front new-units">
+                        <ul class="inline divided">
+                            <li>
+                                <h1>Drivers</h1>
+                                <p>+6</p>
+                            </li>
+                            <li>
+                                <h1>Vehicles</h1>
+                                <p>+14</p>
+                            </li>
+                        </ul>
                     </div>
                     <div class="back">
                         <ul class="inline divided">
@@ -936,30 +947,28 @@
                                 <p>3541</p>
                             </li>
                             <li>
-                                <h1>Last Month</h1>
+                                <h1>Total Vehicles</h1>
 
-                                <p>698</p>
+                                <p>4698</p>
                             </li>
                         </ul>
-                        <div class="summary negative">13% <i class="fa fa-arrow-down"></i> this month</div>
                     </div>
                 </div>
             </div>
 
             <div class="card-container col-lg-6 col-md-6 col-sm-12">
-                <div class="card card-cyan hover">
+                <div class="card card-red hover">
                     <div class="front">
-                        <h1>New Vehicles</h1>
+                        <h1>Vehicle Check</h1>
 
-                        <p id="orders-count">0</p>
-                                    <span class="fa-stack fa-2x pull-right">
-                                      <i class="fa fa-circle fa-stack-2x"></i>
-                                      <i class="fa fa-truck fa-stack-1x"></i>
-                                      <span class="easypiechart" data-percent="55" data-line-width="4" data-size="80"
-                                            data-line-cap="butt" data-animate="2000" data-target="#orders-count" data-update="3000"
-                                            data-bar-color="white" data-scale-color="false"
-                                            data-track-color="rgba(0, 0, 0, 0.15)"></span>
-                                    </span>
+                        <ul class="stats">
+                            <li><span><strong>53</strong> trucks</span> is pass</li>
+                            <li><span class="orange-text"><strong>5</strong> trucks</span> is fail</li>
+                        </ul>
+                        <span class="fa-stack fa-2x pull-right">
+                          <i class="fa fa-truck fa-stack-1x"></i>
+                          <span id="sparkline02"></span>
+                        </span>
                     </div>
                     <div class="back">
                         <ul class="inline divided">
@@ -994,32 +1003,32 @@
             <div class="card-container col-lg-6 col-md-6 col-sm-12">
                 <div class="card card-green hover">
                     <div class="front">
-                        <h1>Driver Card Upload</h1>
-
-                        <p id="sales-count">0</p>
+                        <h1>
+                            Driver Card Upload
+                        </h1>
+                        <ul class="stats">
+                            <li><span class="text-primary"><strong>36</strong> cards</span> is due</li>
+                            <li><span class="text-danger"><strong>15</strong> cards</span> is overdue</li>
+                        </ul>
                         <span class="fa-stack fa-2x pull-right">
-                          <i class="fa fa-circle fa-stack-2x"></i>
                           <i class="fa fa-cloud-upload fa-stack-1x"></i>
-                          <span class="easypiechart" data-percent="30" data-line-width="4" data-size="80"
-                                data-line-cap="butt" data-animate="2000" data-target="#sales-count" data-update="3000"
-                                data-bar-color="white" data-scale-color="false"
-                                data-track-color="rgba(0, 0, 0, 0.15)"></span>
+                          <span id="sparkline03"></span>
                         </span>
                     </div>
                     <div class="back">
                         <ul class="inline divided">
                             <li>
-                                <h1>Total Uploads</h1>
+                                <h1>Due Date</h1>
 
-                                <p>25,165</p>
+                                <p>65</p>
                             </li>
                             <li>
-                                <h1>Last Month</h1>
+                                <h1>Overdue Date</h1>
 
-                                <p>3,154</p>
+                                <p>15</p>
                             </li>
                         </ul>
-                        <div class="summary positive">18% <i class="fa fa-arrow-up"></i> this month</div>
+                        <div class="summary positive">6% <i class="fa fa-arrow-up"></i> this month</div>
                     </div>
                 </div>
             </div>
@@ -1030,30 +1039,66 @@
                     <div class="front">
                         <h1>Vehicle Unit Upload</h1>
 
-                        <p id="visits-count">0</p>
+
+                        <ul class="stats">
+                            <li><span class="text-primary"><strong>43</strong> units</span> is due</li>
+                            <li><span class="text-danger"><strong>13</strong> units</span> is overdue</li>
+                        </ul>
                         <span class="fa-stack fa-2x pull-right">
-                          <i class="fa fa-circle fa-stack-2x"></i>
                           <i class="fa fa-upload fa-stack-1x"></i>
-                          <span class="easypiechart" data-percent="90" data-line-width="4" data-size="80"
-                                data-line-cap="butt" data-animate="2000" data-target="#visits-count" data-update="3000"
-                                data-bar-color="white" data-scale-color="false"
-                                data-track-color="rgba(0, 0, 0, 0.15)"></span>
+                          <span id="sparkline04"></span>
                         </span>
                     </div>
                     <div class="back">
                         <ul class="inline divided">
                             <li>
-                                <h1>Total Uploads</h1>
+                                <h1>Due date</h1>
 
-                                <p>48,694</p>
+                                <p>43</p>
                             </li>
                             <li>
-                                <h1>Last Month</h1>
+                                <h1>Overdue date</h1>
 
-                                <p>9,514</p>
+                                <p>13</p>
                             </li>
                         </ul>
                         <div class="summary negative">2% <i class="fa fa-arrow-down"></i> this month</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row cards">
+
+            <div class="card-container col-lg-6 col-md-6 col-sm-12">
+                <div class="card card-cyan hover">
+                    <div class="front">
+                        <h1>
+                            Mass Load
+                        </h1>
+                        <ul class="stats">
+                            <li><span class=""><strong>22</strong> cards</span> is due</li>
+                            <li><span class="text-danger"><strong>5</strong> cards</span> is overdue</li>
+                        </ul>
+                        <span class="fa-stack fa-2x pull-right">
+                          <i class="fa fa-cloud-upload fa-stack-1x"></i>
+                          <span id="sparkline05"></span>
+                        </span>
+                    </div>
+                    <div class="back">
+                        <ul class="inline divided">
+                            <li>
+                                <h1>Due Date</h1>
+
+                                <p>22</p>
+                            </li>
+                            <li>
+                                <h1>Overdue Date</h1>
+
+                                <p>5</p>
+                            </li>
+                        </ul>
+                        <div class="summary positive">8% <i class="fa fa-arrow-up"></i> this month</div>
                     </div>
                 </div>
             </div>
@@ -1367,7 +1412,82 @@
         
     </ul>
 
-                
+                <div class="row">
+    <div class="col-md-6 col-sm-12 tile">
+        <div class="tile-header transparent">
+            <h1><strong>Vehicle Load</strong> Stats</h1>
+            <div class="controls">
+                <a href="#" class="refresh"><i class="fa fa-refresh"></i></a>
+            </div>
+        </div>
+        <div class="tile-body">
+
+            <table id="line-chart" class="flot-chart" data-type="lines" data-width="100%" data-height="250px" data-font-color="#717171" data-legend="hidden" data-tool-tip="show">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th style="color : #cd97eb;">Max Load</th>
+                    <th style="color : #a2d200;">Min Load</th>
+                    <th style="color : #00A185;">Average Load</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>25.09</th>
+                    <td>356</td>
+                    <td>212</td>
+                    <td>284</td>
+                </tr>
+                <tr>
+                    <th>26.09</th>
+                    <td>684</td>
+                    <td>128</td>
+                    <td>412</td>
+                </tr>
+                <tr>
+                    <th>27.09</th>
+                    <td>692</td>
+                    <td>163</td>
+                    <td>426</td>
+                </tr>
+                <tr>
+                    <th>28.09</th>
+                    <td>987</td>
+                    <td>354</td>
+                    <td>687</td>
+                </tr>
+                <tr>
+                    <th>29.09</th>
+                    <td>1865</td>
+                    <td>985</td>
+                    <td>1364</td>
+                </tr>
+                <tr>
+                    <th>30.09</th>
+                    <td>2158</td>
+                    <td>1214</td>
+                    <td>1702</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-6 col-sm-12 tile">
+        <div class="tile-header transparent">
+            <h1><strong>Vehicle Positions</strong> Map</h1>
+            <div class="controls">
+                <a href="#" class="refresh"><i class="fa fa-refresh"></i></a>
+            </div>
+        </div>
+        <div class="tile-body">
+            <div id="map_canvas" style="height: 250px;">Map</div>
+        </div>
+
+    </div>
+</div>
             
 
             
@@ -1429,10 +1549,44 @@
         //$('.pie-chart').easyPieChart();
 
         //animate numbers on cards
-        $("#users-count").animateNumbers(Math.round(Math.random() * 100));
-        $("#orders-count").animateNumbers(Math.round(Math.random() * 100));
-        $("#sales-count").animateNumbers(Math.round(Math.random() * 10));
-        $("#visits-count").animateNumbers(Math.round(Math.random() * 10));
+//        $("#users-count").animateNumbers(Math.round(Math.random() * 100));
+//        $("#orders-count").animateNumbers(Math.round(Math.random() * 100));
+
+//        $("#sales-count").animateNumbers(Math.round(Math.random() * 10));
+//        $("#visits-count").animateNumbers(Math.round(Math.random() * 10));
+
+        $('#sparkline02').sparkline([2,52], {
+            type: 'pie',
+            width: 'auto',
+            height: '80px',
+            borderWidth: 4,
+            borderColor: "#ffffff",
+            sliceColors: ['#DB3D33','#D7ACEF']
+        });
+        $('#sparkline03').sparkline([15,36], {
+            type: 'pie',
+            width: 'auto',
+            height: '80px',
+            borderWidth: 4,
+            borderColor: "#ffffff",
+            sliceColors: ['#DB3D33','#D7ACEF']
+        });
+        $('#sparkline04').sparkline([13,43], {
+            type: 'pie',
+            width: 'auto',
+            height: '80px',
+            borderWidth: 4,
+            borderColor: "#ffffff",
+            sliceColors: ['#DB3D33','#D7ACEF']
+        });
+        $('#sparkline05').sparkline([5,22], {
+            type: 'pie',
+            width: 'auto',
+            height: '80px',
+            borderWidth: 4,
+            borderColor: "#ffffff",
+            sliceColors: ['#DB3D33','#D7ACEF']
+        });
 
         //animate numbers with class .animate-number with data-value attribute
         $(".animate-number").each(function () {
@@ -1441,29 +1595,6 @@
 
             $(this).animateNumbers(value, true, duration, "linear");
         });
-
-        //animate progress bars
-        $('.animate-progress-bar').each(function () {
-            var progress = $(this).data('percentage');
-
-            $(this).css('width', progress);
-        })
-
-        //update instance every 5 sec
-        window.setInterval(function () {
-
-            //animate numbers on cards
-            $('#users-count').animateNumbers(Math.round(Math.random() * 100));
-            $('#orders-count').animateNumbers(Math.round(Math.random() * 100));
-            $('#sales-count').animateNumbers(Math.round(Math.random() * 10));
-            $('#visits-count').animateNumbers(Math.round(Math.random() * 10));
-
-            //refresh every pie chart
-            $('.easypiechart').each(function () {
-                $(this).data('easyPieChart').update(Math.floor(100 * Math.random()));
-            });
-
-        }, 5000);
 
         //load wysiwyg editor
         $('#quick-message-content').summernote({
@@ -1474,6 +1605,130 @@
         //multiselect input
         $(".chosen-select").chosen({disable_search_threshold: 10});
 
+
+        var bars = false;
+        var lines = true;
+        var pie = false;
+
+        var initializeFlot = function(){
+
+            var el = $('table.flot-chart');
+
+            el.each(function(){
+                var data = $(this).data();
+                var colors = [];
+                var gridColor= data.tickColor || 'rgba(0,0,0,.1)';
+
+                $(this).find('thead th:not(:first)').each(function() {
+                    colors.push($(this).css('color'));
+                });
+
+                if(data.type){
+                    bars = data.type.indexOf('bars') != -1;
+                    lines = data.type.indexOf('lines') != -1;
+                    pie = data.type.indexOf('pie') != -1;
+                }
+
+                $(this).graphTable({
+                            series: 'columns',
+                            position: 'replace',
+                            colors: colors,
+                            width: data.width,
+                            height: data.height
+                        },
+                        {
+                            series: {
+                                stack: data.stack,
+                                pie: {
+                                    show: pie,
+                                    innerRadius: data.innerRadius || 0,
+                                    label:{
+                                        show: data.pieLabel=='show' ? true:false
+                                    }
+                                },
+                                bars: {
+                                    show: bars,
+                                    barWidth: data.barWidth || 0.5,
+                                    fill: data.fill || 1,
+                                    align: 'center'
+                                },
+                                lines: {
+                                    show: lines,
+                                    fill: 0.1,
+                                    lineWidth: 3
+                                },
+                                shadowSize: 0,
+                                points: {
+                                    radius: 4
+                                }
+                            },
+                            xaxis: {
+                                mode: 'categories',
+                                tickLength: 0,
+                                font :{
+                                    lineHeight: 24,
+                                    weight: '300',
+                                    color: data.fontColor,
+                                    size: 14
+                                }
+                            },
+                            yaxis: {
+                                ticks: 4,
+                                tickColor: gridColor,
+                                tickFormatter: function number(x) {  var num; if (x >= 1000) { num=(x/1000)+'k'; }else{ num=x; } return num; },
+                                max: data.yMax,
+                                font :{
+                                    lineHeight: 13,
+                                    weight: '300',
+                                    color: data.fontColor
+                                }
+                            },
+                            grid: {
+                                borderWidth: {
+                                    top: 0,
+                                    right: 0,
+                                    bottom: 1,
+                                    left: 1
+                                },
+                                borderColor:gridColor,
+                                margin: 13,
+                                minBorderMargin:0,
+                                labelMargin:20,
+                                hoverable: true,
+                                clickable: true,
+                                mouseActiveRadius:6
+                            },
+                            legend: { show: data.legend=='show' ? true:false },
+                            tooltip: data.toolTip=='show' ? true:false,
+                            tooltipOpts: { content: (pie ? '%p.0%, %s':'%s :  %y') }
+                        });
+            });
+
+        };
+
+        initializeFlot();
+
+
+        var mapCanvas = $('#map_canvas');
+        mapCanvas.gmap({'center': new google.maps.LatLng(50.195,14.606), 'zoom': 3, 'disableDefaultUI':true}).bind('init', function(evt, map) {
+            var bounds = map.getBounds();
+            var southWest = bounds.getSouthWest();
+            var northEast = bounds.getNorthEast();
+            var lngSpan = northEast.lng() - southWest.lng();
+            var latSpan = northEast.lat() - southWest.lat();
+            for ( var i = 0; i < 50; i++ ) {
+                var lat = southWest.lat() + latSpan * Math.random();
+                var lng = southWest.lng() + lngSpan * Math.random();
+                mapCanvas.gmap('addMarker', {
+                    'position': new google.maps.LatLng(lat, lng)
+                }).click(function() {
+                    mapCanvas.gmap('openInfoWindow', { content : 'Vehicle on the road' }, this);
+                });
+            }
+            mapCanvas.gmap('set', 'MarkerClusterer', new MarkerClusterer(map, $(this).gmap('get', 'markers')));
+            // To call methods in MarkerClusterer simply call
+            // $('#map_canvas').gmap('get', 'MarkerClusterer').callingSomeMethod();
+        });
     })
 
 </script>
