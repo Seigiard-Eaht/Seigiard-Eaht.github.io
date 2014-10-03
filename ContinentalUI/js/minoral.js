@@ -149,19 +149,19 @@ $(function(){
   }
 
 
-  $("#content").not('.full-width').niceScroll({
-    cursorcolor: '#000000',
-    zindex: 999999,
-    bouncescroll: true,
-    cursoropacitymax: 0.4,
-    cursorborder: '',
-    cursorborderradius: 7,
-    cursorwidth: '7px',
-    background: 'rgba(0,0,0,.1)',
-    autohidemode: false,
-    railpadding: {top:0,right:2,left:2,bottom:0},
-    railalign: scrollPlacement
-  });
+//  $("#content").not('.full-width').niceScroll({
+//    cursorcolor: '#000000',
+//    zindex: 999999,
+//    bouncescroll: true,
+//    cursoropacitymax: 0.4,
+//    cursorborder: '',
+//    cursorborderradius: 7,
+//    cursorwidth: '7px',
+//    background: 'rgba(0,0,0,.1)',
+//    autohidemode: false,
+//    railpadding: {top:0,right:2,left:2,bottom:0},
+//    railalign: scrollPlacement
+//  });
 
   /************************/
   /* navigation scrollbar */

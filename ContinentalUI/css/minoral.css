@@ -3275,7 +3275,7 @@ body .navbar .navbar-nav li.quick-action > ul.dropdown-menu > li:last-child a i 
 
 body .navbar .search {
     padding: 15px 0;
-    width: 30%;
+    width: 200px;
     margin-left: 15%;
     float: left;
 }
@@ -12576,10 +12576,10 @@ a small {
 /**************************************/
 /************* RESPONSIVE *************/
 /**************************************/
-@media only screen and (max-width: 1380px) {
+@media only screen and (min-width: 1160px) {
     /* navbar */
     body .navbar .search {
-        width: auto;
+        width: 300px;
         margin: 0 30px 0 50px;
     }
 
