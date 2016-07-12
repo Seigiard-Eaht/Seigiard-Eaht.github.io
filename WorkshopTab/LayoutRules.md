@@ -40,11 +40,15 @@ SceneBuilder используется только как просмоторщи
 
 ### Заголовок и подзаголовок
 
+![](http://seigiard-eaht.github.io/WorkshopTab/title.png)
+
 Заголовок должен быть один в форме и идти первым элементом.
 
     <HBox styleClass="wtb-form--row__title">
         <Text styleClass="wtb-form--title" id="title-text" text="%some_title"  HBox.hgrow="ALWAYS" />        
     </HBox>
+
+![](http://seigiard-eaht.github.io/WorkshopTab/subtitle.png)
 
 Подзаголовков может быть несколько в зависимости от нужд.
 
@@ -102,3 +106,9 @@ SceneBuilder используется только как просмоторщи
 Кнопка на всю ширину с хинтом и с чекбоксом справа должна иметь следующие параметры: 
 
     prefWidth="750.0" minWidth="-Infinity" maxWidth="-Infinity"
+    
+## Примеры кода
+
+### Подсказка
+
+![](http://seigiard-eaht.github.io/WorkshopTab/text-important.png)
