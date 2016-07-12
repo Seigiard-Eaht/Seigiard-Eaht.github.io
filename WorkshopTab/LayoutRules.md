@@ -112,3 +112,27 @@ SceneBuilder используется только как просмоторщи
 ### Подсказка
 
 ![](http://seigiard-eaht.github.io/WorkshopTab/text-important.png)
+
+
+### Подсказка
+
+![](http://seigiard-eaht.github.io/WorkshopTab/label-radiobuttons.png)
+
+
+### Подсказка
+
+![](http://seigiard-eaht.github.io/WorkshopTab/label-input.png)
+
+
+### Подсказка
+
+![](http://seigiard-eaht.github.io/WorkshopTab/label-helper-radiobuttons.png)
+
+### Подсказка
+
+![](http://seigiard-eaht.github.io/WorkshopTab/label-helper-checkbox.png)
+
+
+### Подсказка
+
+![](http://seigiard-eaht.github.io/WorkshopTab/button_full_width-helper-checkbox.png)
