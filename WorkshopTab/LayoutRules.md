@@ -6,7 +6,7 @@ SceneBuilder используется только как просмоторщи
 
 ## Основной файл визарда
 
-    <SplitPane id="splitPane" dividerPositions="0.46190476190476193"
+    <SplitPane id="splitPane" dividerPositions="0.24"
            stylesheets="@../../../common/css/metro-ui.css"
            styleClass="wtb-scene"
            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
