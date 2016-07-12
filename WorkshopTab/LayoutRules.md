@@ -43,8 +43,7 @@ SceneBuilder используется только как просмоторщи
 Заголовок должен быть один в форме и идти первым элементом.
 
     <VBox styleClass="wtb-form--row__title">
-        <Text styleClass="wtb-form--title" id="title-text" text="%some_title"  HBox.hgrow="ALWAYS" />
-        <Separator styleClass="wtb-form--subtitle-border" HBox.hgrow="ALWAYS" />
+        <Text styleClass="wtb-form--title" id="title-text" text="%some_title"  HBox.hgrow="ALWAYS" />        
     </VBox>
 
 Подзаголовков может быть несколько в зависимости от нужд.
