@@ -40,6 +40,42 @@ SceneBuilder используется только как просмоторщи
       stylesheets="@../../../common/css/metro-ui.css"
       xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
 
+### Секция формы
+
+Секции формы формируются из ``HBox``, ``Grid`` и прочих ``Pane`` с ``.wtb-form--row``, который дает вертикальные отступы между строками формы.
+
+    <HBox styleClass="wtb-form--row">
+
+#### Заголовки секции
+
+Для лэйблов форм используйте ``Label.wtb-form--label``.
+
+    <Label styleClass="wtb-form--label" text="%some-label"/>
+
+Если после лейбла необходим знак вопроса с подсказкой, надо использовать следующую конструкцию: спейсер и компонент подсказки
+
+    <Pane styleClass="wtb-form--spacer-10px" HBox.hgrow="NEVER"/>
+    <Pane fx:id="WSCardINWTReader_helper" />
+
+После кажого лейбла со знаком вопроса или без надо размещать спейсер.
+    
+    <Pane HBox.hgrow="ALWAYS"/>
+
+#### Радиобаттоны и чекбоксы
+
+Радиобаттоны и чекбоксы должны иметь классы ``.wtb-form--radiobutton`` и ``.wtb-form--checkbox`` соответственно.
+
+Перед каждым чекбоксом, радибаттоном или инпутом, чтобы отбить его от текста, надо размещать pane с классом ``wtb-form--spacer-30px``
+
+    <Pane styleClass="wtb-form--spacer-30px" HBox.hgrow="NEVER"/>
+    <RadioButton styleClass="wtb-form--radiobutton" fx:id="rbManipulationOk" text="OK" toggleGroup="$tgManipulation" userData="0"/>
+
+    <Pane styleClass="wtb-form--spacer-30px" HBox.hgrow="NEVER"/>
+    <CheckBox styleClass="wtb-form--checkbox" fx:id="cbErrorMemory"/>
+
+
+## Библиотека элементов
+
 ### Заголовок и подзаголовок
 
 ![](http://seigiard-eaht.github.io/WorkshopTab/title.png)
@@ -79,41 +115,7 @@ SceneBuilder используется только как просмоторщи
         <Separator styleClass="wtb-form--subtitle-border" />
     </VBox>
 
-### Секция формы
 
-Секции формы формируются из ``HBox``, ``Grid`` и прочих ``Pane`` с ``.wtb-form--row``, который дает вертикальные отступы между строками формы.
-
-    <HBox styleClass="wtb-form--row">
-
-#### Заголовки секции
-
-Для лэйблов форм используйте ``Label.wtb-form--label``.
-
-    <Label styleClass="wtb-form--label" text="%some-label"/>
-
-Если после лейбла необходим знак вопроса с подсказкой, надо использовать следующую конструкцию: спейсер и компонент подсказки
-
-    <Pane styleClass="wtb-form--spacer-10px" HBox.hgrow="NEVER"/>
-    <Pane fx:id="WSCardINWTReader_helper" />
-
-После кажого лейбла со знаком вопроса или без надо размещать спейсер.
-    
-    <Pane HBox.hgrow="ALWAYS"/>
-
-#### Радиобаттоны и чекбоксы
-
-Радиобаттоны и чекбоксы должны иметь классы ``.wtb-form--radiobutton`` и ``.wtb-form--checkbox`` соответственно.
-
-Перед каждым чекбоксом, радибаттоном или инпутом, чтобы отбить его от текста, надо размещать pane с классом ``wtb-form--spacer-30px``
-
-    <Pane styleClass="wtb-form--spacer-30px" HBox.hgrow="NEVER"/>
-    <RadioButton styleClass="wtb-form--radiobutton" fx:id="rbManipulationOk" text="OK" toggleGroup="$tgManipulation" userData="0"/>
-
-    <Pane styleClass="wtb-form--spacer-30px" HBox.hgrow="NEVER"/>
-    <CheckBox styleClass="wtb-form--checkbox" fx:id="cbErrorMemory"/>
-
-
-## Библиотека элементов
 
 ### Подсказка
 
@@ -249,10 +251,25 @@ SceneBuilder используется только как просмоторщи
 
 ![](http://seigiard-eaht.github.io/WorkshopTab/label-input.png)
 
+Обратите внимание, ``TextField`` может быть с классами ``wtb-form--input__xs``, ``wtb-form--input__sm``, ``wtb-form--input__md``, ``wtb-form--input__lg``.
+
     <HBox styleClass="wtb-form--row">
         <Label styleClass="wtb-form--label" text="%label_text"/>
         <Pane HBox.hgrow="ALWAYS"/>
+    
+        <Pane styleClass="wtb-form--spacer-30px" HBox.hgrow="NEVER"/>
+        <TextField styleClass="wtb-form--input__xs" fx:id="fieldID"/>
+    </HBox>
 
+### Название, Хелпер и Поле ввода
+
+    <HBox styleClass="wtb-form--row">
+        <Label styleClass="wtb-form--label" text="%label_text"/>
+    
+        <Pane styleClass="wtb-form--spacer-10px" HBox.hgrow="NEVER"/>
+        <Pane fx:id="hintQuesionSign" />
+        <Pane HBox.hgrow="ALWAYS"/>
+    
         <Pane styleClass="wtb-form--spacer-30px" HBox.hgrow="NEVER"/>
         <TextField styleClass="wtb-form--input__xs" fx:id="fieldID"/>
     </HBox>
