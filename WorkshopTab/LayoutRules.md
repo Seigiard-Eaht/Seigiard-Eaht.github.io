@@ -4,6 +4,8 @@ SceneBuilder используется только как просмоторщи
 
 Надо максимально избегать стилей в тексте: ``minWidth``, ``prefHeight``, ``minWidth``, ``minHeight``, ``<Insets>`` и прочая ерунда запрещены. ``maxWidth`` или ``prefWidth`` может быть использован пару раз, эти случаи описываются ниже.
 
+При переверстке текущих шаблонов надо особенно аккуратными быть с параметрами ``text``, ``fx:define``, ``fx:id`` и ``id``. Не копируйте бездумно из примеров, а обязательно заменяйте на текущие значения.
+
 ## Основной файл визарда
 
     <SplitPane id="splitPane" dividerPositions="0.24"
@@ -111,22 +113,6 @@ SceneBuilder используется только как просмоторщи
     <CheckBox styleClass="wtb-form--checkbox" fx:id="cbErrorMemory"/>
 
 
-Лейбл без хинта и с чекбоксом справа должен иметь максимальную ширину в 780пх 
-
-    maxWidth="780.0"
-
-Лейбл с хинтом и чекбоксом справа должен иметь максимальную ширину в 750пх
-
-    maxWidth="750.0"
-
-Кнопка на всю ширину без хинта и с чекбоксом справа должна иметь следующие параметры: 
-
-    prefWidth="780.0" minWidth="-Infinity" maxWidth="-Infinity"
-
-Кнопка на всю ширину с хинтом и с чекбоксом справа должна иметь следующие параметры: 
-
-    prefWidth="750.0" minWidth="-Infinity" maxWidth="-Infinity"
-    
 ## Библиотека элементов
 
 ### Подсказка
@@ -144,21 +130,129 @@ SceneBuilder используется только как просмоторщи
 
 ![](http://seigiard-eaht.github.io/WorkshopTab/label-radiobuttons.png)
 
+Обратите внимание, тут мы используем ``maxWidth="550"`` для ``Label``. Это значение не универсально, оно зависит от ширины надписи в радиокнопках.
 
-### Название и Поле ввода
+    <HBox styleClass="wtb-form--row">
+        <children>
+            <Label styleClass="wtb-form--label" maxWidth="520" text="%label_text" />
 
-![](http://seigiard-eaht.github.io/WorkshopTab/label-input.png)
+            <Pane HBox.hgrow="ALWAYS"/>
 
+            <fx:define>
+                <ToggleGroup fx:id="manipulationsHintsRecognizable"/>
+            </fx:define>
+
+            <Pane styleClass="wtb-form--spacer-30px" HBox.hgrow="NEVER"/>
+            <RadioButton styleClass="wtb-form--radiobutton"
+                         fx:id="radioButton1" text="%radiobutton_text1"
+                         toggleGroup="$manipulationsHintsRecognizable"/>
+            <Pane styleClass="wtb-form--spacer-30px" HBox.hgrow="NEVER"/>
+            <RadioButton styleClass="wtb-form--radiobutton"
+                         fx:id="radioButton2" text="%radiobutton_text2"
+                         toggleGroup="$manipulationsHintsRecognizable"/>
+        </children>
+    </HBox>
 
 ### Название, Хелпер и Радиокнопки
 
 ![](http://seigiard-eaht.github.io/WorkshopTab/label-helper-radiobuttons.png)
 
+Обратите внимание, тут мы используем ``maxWidth="520"`` для ``Label``. Это значение не универсально, оно зависит от ширины надписи в радиокнопках.
+
+    <HBox styleClass="wtb-form--row">
+        <children>
+            <Label styleClass="wtb-form--label" maxWidth="520" text="%label_text" />
+    
+            <Pane styleClass="wtb-form--spacer-10px" HBox.hgrow="NEVER"/>
+            <Pane fx:id="hintQuesionSign"/>
+    
+            <Pane HBox.hgrow="ALWAYS"/>
+    
+            <fx:define>
+                <ToggleGroup fx:id="manipulationsHintsRecognizable"/>
+            </fx:define>
+    
+            <Pane styleClass="wtb-form--spacer-30px" HBox.hgrow="NEVER"/>
+            <RadioButton styleClass="wtb-form--radiobutton"
+                         fx:id="radioButton1" text="%radiobutton_text1"
+                         toggleGroup="$manipulationsHintsRecognizable"/>
+            <Pane styleClass="wtb-form--spacer-30px" HBox.hgrow="NEVER"/>
+            <RadioButton styleClass="wtb-form--radiobutton"
+                         fx:id="radioButton2" text="%radiobutton_text2"
+                         toggleGroup="$manipulationsHintsRecognizable"/>
+        </children>
+    </HBox>
+
+### Название и Чекбокс
+
+![](http://seigiard-eaht.github.io/WorkshopTab/label-helper-checkbox.png)
+
+Обратите внимание, тут мы используем ``maxWidth="780"`` для ``Label``
+
+    <HBox styleClass="wtb-form--row">
+        <Label styleClass="wtb-form--label" text="%label_text" maxWidth="780"/>
+
+        <Pane HBox.hgrow="ALWAYS"/>
+        <Pane styleClass="wtb-form--spacer-30px" HBox.hgrow="NEVER"/>
+        <CheckBox styleClass="wtb-form--checkbox" fx:id="manipulationCheck"></CheckBox>
+    </HBox>
+
 ### Название, Хелпер и Чекбокс
 
 ![](http://seigiard-eaht.github.io/WorkshopTab/label-helper-checkbox.png)
 
+Обратите внимание, тут мы используем ``maxWidth="750"`` для ``Label``
+
+    <HBox styleClass="wtb-form--row">
+        <Label styleClass="wtb-form--label" text="%label_text" maxWidth="750"/>
+        <Pane styleClass="wtb-form--spacer-10px" HBox.hgrow="NEVER"/>
+        <Pane fx:id="hintQuesionSign" />
+        <Pane HBox.hgrow="ALWAYS"/>
+        <Pane styleClass="wtb-form--spacer-30px" HBox.hgrow="NEVER"/>
+        <CheckBox styleClass="wtb-form--checkbox" fx:id="manipulationCheck"></CheckBox>
+    </HBox>
+
+### Кнопка на всю длину и Чекбокс
+
+![](http://seigiard-eaht.github.io/WorkshopTab/button_full_width-helper-checkbox.png)
+
+Обратите внимание, тут мы используем ``prefWidth="780.0" minWidth="-Infinity" maxWidth="-Infinity"`` для ``Button``
+
+    <HBox styleClass="wtb-form--row">
+        <Button fx:id="buttonId" mnemonicParsing="false" styleClass="wtb-form--button"
+                prefWidth="780.0" minWidth="-Infinity" maxWidth="-Infinity"
+                text="%button_text" />
+
+        <Pane HBox.hgrow="ALWAYS"/>
+        <Pane styleClass="wtb-form--spacer-30px" HBox.hgrow="NEVER"/>
+        <CheckBox styleClass="wtb-form--checkbox" fx:id="manipulationCheck"/>
+    </HBox>
 
 ### Кнопка на всю длину, Хелпер и Чекбокс
 
 ![](http://seigiard-eaht.github.io/WorkshopTab/button_full_width-helper-checkbox.png)
+
+Обратите внимание, тут мы используем ``prefWidth="750.0" minWidth="-Infinity" maxWidth="-Infinity"`` для ``Button``
+
+    <HBox styleClass="wtb-form--row">
+        <Button fx:id="buttonId" mnemonicParsing="false" styleClass="wtb-form--button"
+                prefWidth="750.0" minWidth="-Infinity" maxWidth="-Infinity"
+                text="%button_text" />
+        <Pane styleClass="wtb-form--spacer-10px" HBox.hgrow="NEVER"/>
+        <Pane fx:id="hintQuesionSign" />
+        <Pane HBox.hgrow="ALWAYS"/>
+        <Pane styleClass="wtb-form--spacer-30px" HBox.hgrow="NEVER"/>
+        <CheckBox styleClass="wtb-form--checkbox" fx:id="manipulationCheck"/>
+    </HBox>
+
+### Название и Поле ввода
+
+![](http://seigiard-eaht.github.io/WorkshopTab/label-input.png)
+
+    <HBox styleClass="wtb-form--row">
+        <Label styleClass="wtb-form--label" text="%label_text"/>
+        <Pane HBox.hgrow="ALWAYS"/>
+
+        <Pane styleClass="wtb-form--spacer-30px" HBox.hgrow="NEVER"/>
+        <TextField styleClass="wtb-form--input__xs" fx:id="fieldID"/>
+    </HBox>
