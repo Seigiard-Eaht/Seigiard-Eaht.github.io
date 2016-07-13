@@ -45,16 +45,36 @@ SceneBuilder используется только как просмоторщи
 Заголовок должен быть один в форме и идти первым элементом.
 
     <HBox styleClass="wtb-form--row__title">
-        <Text styleClass="wtb-form--title" id="title-text" text="%some_title"  HBox.hgrow="ALWAYS" />        
+        <children>
+            <Label styleClass="wtb-form--title"
+                    text="%some_title" />
+        </children>
     </HBox>
-
-![](http://seigiard-eaht.github.io/WorkshopTab/subtitle.png)
 
 Подзаголовков может быть несколько в зависимости от нужд.
 
     <VBox styleClass="wtb-form--row__subtitle">
-        <Text styleClass="wtb-form--subtitle" id="subtitle-text" text="%some_subtitle" HBox.hgrow="ALWAYS" />
-        <Separator styleClass="wtb-form--subtitle-border" HBox.hgrow="ALWAYS" />
+        <children>
+            <Label styleClass="wtb-form--subtitle"
+                    text="%some_subtitle" />
+            <Separator styleClass="wtb-form--subtitle-border" />
+        </children>
+    </VBox>
+
+Подзаголовок с хелпером
+
+![](http://seigiard-eaht.github.io/WorkshopTab/subtitle.png)
+
+    <VBox styleClass="wtb-form--row__subtitle">
+        <HBox>
+            <children>
+                <Label styleClass="wtb-form--subtitle"
+                  text="%some_subtitle" />
+                <Pane styleClass="wtb-form--spacer-10px" HBox.hgrow="NEVER"/>
+                <Pane fx:id="backupData_helper" />
+            </children>
+        </HBox>
+        <Separator styleClass="wtb-form--subtitle-border" />
     </VBox>
 
 ### Секция формы
@@ -107,32 +127,38 @@ SceneBuilder используется только как просмоторщи
 
     prefWidth="750.0" minWidth="-Infinity" maxWidth="-Infinity"
     
-## Примеры кода
+## Библиотека элементов
 
 ### Подсказка
 
 ![](http://seigiard-eaht.github.io/WorkshopTab/text-important.png)
 
+    <HBox styleClass="wtb-form--row" >
+        <children>
+            <Label styleClass="wtb-form--notice-important" text="%some_text"/>
+        </children>
+    </HBox>
 
-### Подсказка
+
+### Название и Радиокнопки
 
 ![](http://seigiard-eaht.github.io/WorkshopTab/label-radiobuttons.png)
 
 
-### Подсказка
+### Название и Поле ввода
 
 ![](http://seigiard-eaht.github.io/WorkshopTab/label-input.png)
 
 
-### Подсказка
+### Название, Хелпер и Радиокнопки
 
 ![](http://seigiard-eaht.github.io/WorkshopTab/label-helper-radiobuttons.png)
 
-### Подсказка
+### Название, Хелпер и Чекбокс
 
 ![](http://seigiard-eaht.github.io/WorkshopTab/label-helper-checkbox.png)
 
 
-### Подсказка
+### Кнопка на всю длину, Хелпер и Чекбокс
 
 ![](http://seigiard-eaht.github.io/WorkshopTab/button_full_width-helper-checkbox.png)
