@@ -136,7 +136,7 @@ SceneBuilder используется только как просмоторщи
 
     <HBox styleClass="wtb-form--row">
         <children>
-            <Label styleClass="wtb-form--label" maxWidth="520" text="%label_text" />
+            <Label styleClass="wtb-form--label" maxWidth="550" text="%label_text" />
 
             <Pane HBox.hgrow="ALWAYS"/>
 
