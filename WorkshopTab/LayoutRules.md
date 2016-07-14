@@ -18,6 +18,9 @@ SceneBuilder используется только как просмоторщи
              <GridPane styleClass="wtb-sidebar--menu" fx:id="navigationPane" />
           </VBox>
           <AnchorPane styleClass="wtb-content" fx:id="contentAnchorPane">
+                <ScrollPane styleClass="wtb-frame" AnchorPane.leftAnchor="0.0">
+                    <Pane styleClass="wtb-iframe" fx:id="wizardStepsPane"/>
+                </ScrollPane>
           </AnchorPane>
         </items>
     </SplitPane>
@@ -45,6 +48,8 @@ SceneBuilder используется только как просмоторщи
 Секции формы формируются из ``HBox``, ``Grid`` и прочих ``Pane`` с ``.wtb-form--row``, который дает вертикальные отступы между строками формы.
 
     <HBox styleClass="wtb-form--row">
+
+Ширина внутреннего пространства секции (т.е. с вычетом отступов) равна 880px.
 
 #### Заголовки секции
 
@@ -218,6 +223,58 @@ SceneBuilder используется только как просмоторщи
         <CheckBox styleClass="wtb-form--checkbox" fx:id="manipulationCheck"></CheckBox>
     </HBox>
 
+### Название и Поле ввода
+
+![](http://seigiard-eaht.github.io/WorkshopTab/label-input.png)
+
+Обратите внимание, ``TextField`` может быть с классами ``wtb-form--input__xs``, ``wtb-form--input__sm``, ``wtb-form--input__md``, ``wtb-form--input__lg``.
+
+    <HBox styleClass="wtb-form--row">
+        <Label styleClass="wtb-form--label" text="%label_text"/>
+        <Pane HBox.hgrow="ALWAYS"/>
+    
+        <Pane styleClass="wtb-form--spacer-30px" HBox.hgrow="NEVER"/>
+        <TextField styleClass="wtb-form--input__xs" fx:id="fieldID"/>
+    </HBox>
+
+### Название, Хелпер и Поле ввода
+
+    <HBox styleClass="wtb-form--row">
+        <Label styleClass="wtb-form--label" text="%label_text"/>
+    
+        <Pane styleClass="wtb-form--spacer-10px" HBox.hgrow="NEVER"/>
+        <Pane fx:id="hintQuesionSign" />
+        <Pane HBox.hgrow="ALWAYS"/>
+    
+        <Pane styleClass="wtb-form--spacer-30px" HBox.hgrow="NEVER"/>
+        <TextField styleClass="wtb-form--input__xs" fx:id="fieldID"/>
+    </HBox>
+
+###  Два радиобаттона
+
+    <HBox styleClass="wtb-form--row">
+        <children>
+            <fx:define>
+                <ToggleGroup fx:id="radiobuttonGroup"/>
+            </fx:define>
+            <RadioButton fx:id="radiobutton1"
+                         text="%radiobutton_text2"
+                         styleClass="wtb-form--radiobutton" toggleGroup="$radiobuttonGroup"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <RadioButton fx:id="radiobutton2"
+                         text="%radiobutton_text2"
+                         styleClass="wtb-form--radiobutton" toggleGroup="$radiobuttonGroup"/>
+        </children>
+    </HBox>
+
+### Кнопка на всю длину
+
+    <HBox styleClass="wtb-form--row">
+        <children>
+            <Button mnemonicParsing="false" onAction="#pairVUAndSensor"  styleClass="wtb-form--button__full" text="%pair_sensor_button_label"></Button>
+        </children>
+    </HBox>
+
 ### Кнопка на всю длину и Чекбокс
 
 ![](http://seigiard-eaht.github.io/WorkshopTab/button_full_width-helper-checkbox.png)
@@ -251,29 +308,3 @@ SceneBuilder используется только как просмоторщи
         <CheckBox styleClass="wtb-form--checkbox" fx:id="manipulationCheck"/>
     </HBox>
 
-### Название и Поле ввода
-
-![](http://seigiard-eaht.github.io/WorkshopTab/label-input.png)
-
-Обратите внимание, ``TextField`` может быть с классами ``wtb-form--input__xs``, ``wtb-form--input__sm``, ``wtb-form--input__md``, ``wtb-form--input__lg``.
-
-    <HBox styleClass="wtb-form--row">
-        <Label styleClass="wtb-form--label" text="%label_text"/>
-        <Pane HBox.hgrow="ALWAYS"/>
-    
-        <Pane styleClass="wtb-form--spacer-30px" HBox.hgrow="NEVER"/>
-        <TextField styleClass="wtb-form--input__xs" fx:id="fieldID"/>
-    </HBox>
-
-### Название, Хелпер и Поле ввода
-
-    <HBox styleClass="wtb-form--row">
-        <Label styleClass="wtb-form--label" text="%label_text"/>
-    
-        <Pane styleClass="wtb-form--spacer-10px" HBox.hgrow="NEVER"/>
-        <Pane fx:id="hintQuesionSign" />
-        <Pane HBox.hgrow="ALWAYS"/>
-    
-        <Pane styleClass="wtb-form--spacer-30px" HBox.hgrow="NEVER"/>
-        <TextField styleClass="wtb-form--input__xs" fx:id="fieldID"/>
-    </HBox>
