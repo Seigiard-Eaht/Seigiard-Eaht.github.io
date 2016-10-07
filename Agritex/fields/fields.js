@@ -39,7 +39,7 @@
             .state('fields.list.delete', {
                 url: '/delete',
                 views: {
-                    'aside@fields': {
+                    '@fields': {
                         template: '<delete-confirmation delete-item="Rye Field"></delete-confirmation>'
                     }
                 }
@@ -67,7 +67,7 @@
             .state('fields.farms.delete', {
                 url: '/delete',
                 views: {
-                    'aside@fields': {
+                    '@fields': {
                         template: '<delete-confirmation delete-item="Rice farm"></delete-confirmation>'
                     }
                 }
