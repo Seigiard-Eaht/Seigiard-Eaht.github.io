@@ -1,0 +1,42 @@
+
+<div class="ui">
+  <h2 class="ui header">
+    <!--button.ui.red.button.pull-right(type='submit', ui-sref="^") Revise-->SEASONAL CROP ANALYSIS REPORT
+    <div class="sub header">Crop Management</div>
+  </h2>
+  <form class="ui form">
+    <div class="two fields">
+      <div class="field">
+        <label>Date</label>
+        <div id="rangestart" class="ui calendar">
+          <div class="ui input left icon"><i class="calendar icon"></i>
+            <input type="text" placeholder="" value="2016/07/12"/>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <label>Time</label>
+        <div id="rangeend" class="ui calendar">
+          <div class="ui input left icon"><i class="time icon"></i>
+            <input type="text" placeholder="" value="9:00"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label>Germination percentage</label>
+      <input type="text" name="first-name" value="15%"/>
+    </div>
+    <div class="field">
+      <label>Plant height</label>
+      <input type="text" name="first-name" value="18cm"/>
+    </div>
+    <div class="field">
+      <label>Number of Beans</label>
+      <input type="text" name="first-name" value="100"/>
+    </div>
+    <button type="submit" ui-sref="^" class="ui teal button">Save</button>
+    <button type="submit" ui-sref="^" class="ui black button">Cancel</button>
+  </form>
+  <activity-comments></activity-comments>
+</div>

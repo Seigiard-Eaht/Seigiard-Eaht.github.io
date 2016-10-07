@@ -1,0 +1,17 @@
+
+<div class="ui segment">
+  <h2 ng-if="mode === 'new'" class="ui header">Add Type</h2>
+  <h2 ng-if="mode !== 'new'" class="ui header">Edit Type</h2>
+  <form class="ui form">
+    <div class="field">
+      <label>Type Name</label>
+      <input type="text" name="first-name" ng-model="type.name"/>
+    </div>
+    <!--.field
+    label Type Code
+    input(type='text', name='text', ng-model="type.code")
+    -->
+    <button ui-sref="^" class="ui teal button">Save</button>
+    <button ui-sref="^" class="ui black button">Cancel</button>
+  </form>
+</div>

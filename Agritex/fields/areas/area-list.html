@@ -1,0 +1,32 @@
+
+<div>
+  <h2 class="ui header">Areas</h2>
+  <div class="ui form">
+    <div class="inline field ta-right">
+      <!--label Order by:-->
+      <!--select.ui.dropdown(name='actions')option(value='name') Name
+      -->
+      <button ui-sref="fields.areas.add" class="ui teal floated button">Add Area</button>
+    </div>
+  </div>
+  <table class="ui table">
+    <thead>
+      <tr>
+        <th width="70%">Name</th>
+        <th>Area (km²)</th>
+        <th>Farms</th>
+        <th>Fields</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="area in $ctrl.areas">
+        <td>{{::area.name}}</td>
+        <td>{{::area.area}}</td>
+        <td><a ui-sref="fields.farms">{{::area.farms}}</a></td>
+        <td><a ui-sref="fields.list">{{::area.fields}}</a></td>
+        <td><a ui-sref="fields.areas.edit({id: area.id})">Edit</a>&nbsp;|&nbsp;<a ui-sref="fields.areas.delete({id: area.id})">Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

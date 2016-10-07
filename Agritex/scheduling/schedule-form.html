@@ -1,0 +1,14 @@
+
+<form class="ui form">
+  <div ng-repeat="activity in $ctrl.activities track by $index" class="ui segment">
+    <schedule-activity activity="activity"></schedule-activity>
+  </div>
+  <div class="field">
+    <button type="button" ng-click="$ctrl.addActivity()" class="fluid ui teal button">Add activity</button>
+  </div>
+  <div class="ui dividing header"></div>
+  <div class="field">
+    <button type="submit" ui-sref="^" class="ui teal button">Save</button>
+    <button type="submit" ui-sref="^" class="ui black button">Cancel</button>
+  </div>
+</form>

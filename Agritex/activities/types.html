@@ -1,0 +1,28 @@
+
+<div>
+  <h2 class="ui header">Types</h2>
+  <div class="ui form">
+    <div class="inline field ta-right">
+      <!--label Order by:-->
+      <!--select.ui.dropdown(name='actions')option(value='name') Name
+      -->
+      <button ui-sref="activities.types.add" class="ui teal button">Add type</button>
+    </div>
+  </div>
+  <table class="ui table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <!--th Code-->
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="type in $ctrl.types">
+        <td width="80%">{{type.name}}</td>
+        <!--td {{type.code}}-->
+        <td no-wrap="no-wrap"><a ui-sref="activities.types.edit">Edit</a>&nbsp;|&nbsp;<a ui-sref="activities.types.delete">Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

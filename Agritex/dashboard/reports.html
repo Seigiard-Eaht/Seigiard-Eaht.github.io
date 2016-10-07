@@ -1,0 +1,77 @@
+
+<h2 class="ui header">Activity Reports</h2>
+<h3 class="ui dividing header">Overdue activities</h3>
+<table class="ui table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Area</th>
+      <th>Farm</th>
+      <th>Field</th>
+      <th>Activity</th>
+      <th>Season</th>
+      <th width="140">Report</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>01.01.2016</td>
+      <td>Colombo</td>
+      <td>Wheat farm</td>
+      <td>Wheat field</td>
+      <td>Weekly activity report</td>
+      <td>Season 2016</td>
+      <td><a>Reassign Officer</a></td>
+    </tr>
+  </tbody>
+</table>
+<h3 class="ui dividing header">Active activities</h3>
+<table class="ui table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Area</th>
+      <th>Farm</th>
+      <th>Field</th>
+      <th>Activity</th>
+      <th>Season</th>
+      <th width="140">Report</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>01.01.2016</td>
+      <td>Colombo</td>
+      <td>Rye farm</td>
+      <td>Rye field</td>
+      <td>SAC cotton cultivation reports</td>
+      <td>Season 2016</td>
+      <td><a>Check Report</a></td>
+    </tr>
+  </tbody>
+</table>
+<h3 class="ui dividing header">Completed activities</h3>
+<table class="ui table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Area</th>
+      <th>Farm</th>
+      <th>Field</th>
+      <th>Activity</th>
+      <th>Season</th>
+      <th width="140">Report</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="report in $ctrl.reports">
+      <td>01.01.{{::report.season}}</td>
+      <td>Colombo</td>
+      <td>Rye farm</td>
+      <td>Rye field</td>
+      <td>{{::report.activity}}</td>
+      <td>Season {{::report.season}}</td>
+      <td><a>View Report</a></td>
+    </tr>
+  </tbody>
+</table>

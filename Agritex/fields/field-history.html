@@ -1,0 +1,20 @@
+
+<h2 class="ui header">Cotton field season history</h2>
+<table class="ui table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Activity</th>
+      <th>Season</th>
+      <th>Report</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="report in $ctrl.reports">
+      <td>01.01.{{::report.season}}</td>
+      <td>{{::report.activity}}</td>
+      <td>Season {{::report.season}}</td>
+      <td><a>View Report</a></td>
+    </tr>
+  </tbody>
+</table>

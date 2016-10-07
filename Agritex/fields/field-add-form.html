@@ -1,0 +1,53 @@
+
+<div>
+  <h2 ng-if="mode === 'new'" class="ui header">Add Field</h2>
+  <h2 ng-if="mode !== 'new'" class="ui header">Edit Field</h2>
+  <form class="ui form">
+    <div class="inline fields">
+      <div class="twelve wide field">
+        <label>Name</label>
+        <input type="text" name="first-name" value="Wheat field"/>
+      </div>
+      <div class="four wide field">
+        <div class="ui toggle checkbox">
+          <input type="checkbox" checked="checked" tabindex="0" class="hidden"/>
+          <label>Enable</label>
+        </div>
+      </div>
+    </div>
+    <div class="two fields">
+      <div class="field">
+        <label>Farm</label>
+        <select name="area" class="ui dropdown">
+          <option value="sri-lanka">Wheat Farm</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Area</label>
+        <select name="area" class="ui dropdown">
+          <option value="sri-lanka">Sri Lanka</option>
+        </select>
+      </div>
+    </div>
+    <div class="field">
+      <label>Location</label>
+      <location></location>
+    </div>
+    <div class="field">
+      <label>Field Officer</label>
+      <select name="area" class="ui dropdown">
+        <option value="sri-lanka">John Doe</option>
+      </select>
+    </div>
+    <button ui-sref="^" class="ui teal button">Save</button>
+    <button ui-sref="^" class="ui black button">Cancel</button>
+  </form>
+  <div class="ui raised segment">
+    <h4><a href="">Current Season</a></h4>
+    <ul>
+      <li>Planting has been finished on 24.07</li>
+      <li>Field Inspection <strong>is today</strong> by John Doe</li>
+      <li>Field Inspection on 20.10 by John Doe</li>
+    </ul>
+  </div>
+</div>

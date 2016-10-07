@@ -1,0 +1,41 @@
+
+<form name="$ctrl.form" novalidate="novalidate" ng-submit="$ctrl.formSubmit({data: $ctrl.data})" class="ui form">
+  <div class="field">
+    <label>Name</label>
+    <input type="text" required="required" ng-model="$ctrl.data.name"/>
+  </div>
+  <div class="field">
+    <label>Location</label>
+    <location></location>
+  </div>
+  <div class="two fields">
+    <div class="field">
+      <label>Typography</label>
+      <input type="text" required="required" ng-model="$ctrl.data.typography"/>
+    </div>
+    <div class="field">
+      <label>Infrastructure</label>
+      <input type="text" required="required" ng-model="$ctrl.data.infrastructure"/>
+    </div>
+  </div>
+  <div class="two fields">
+    <div class="field">
+      <label>Irrigation Source</label>
+      <input type="text" required="required" ng-model="$ctrl.data.irrigation_source"/>
+    </div>
+    <div class="field">
+      <label>&nbsp;</label>
+      <label>
+        <input type="checkbox" ng-model="$ctrl.data.soil_analysis"/> Soil Analysis
+      </label>
+    </div>
+  </div>
+  <div class="field">
+    <label>Area Manager</label>
+    <select name="area" required="required" ui-select="ui-select" class="ui dropdown">
+      <option value="sri-lanka">Patsy Steuber</option>
+    </select>
+  </div>
+  <button type="submit" class="ui teal button">Save</button>
+  <button ng-click="$ctrl.formCancel()" class="ui black button">Cancel</button>
+</form>

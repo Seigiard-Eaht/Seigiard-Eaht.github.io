@@ -1,0 +1,57 @@
+
+<div class="ui segment">
+  <h2 ng-if="mode === 'new'" class="ui header">Add User</h2>
+  <h2 ng-if="mode !== 'new'" class="ui header">Edit User</h2>
+  <form class="ui form">
+    <div class="field">
+      <label>Login</label>
+      <input type="text" name="first-name" ng-model="user.name"/>
+    </div>
+    <div class="field">
+      <label>Email</label>
+      <input type="email" name="email" placeholder="" ng-model="user.email"/>
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <input type="password" name="password" placeholder="" ng-model="user.password"/>
+    </div>
+    <div class="inline field">
+      <div class="ui checkbox">
+        <input type="checkbox" tabindex="0" class="hidden"/>
+        <label>Top Manager TO</label>
+      </div>
+    </div>
+    <div class="inline field">
+      <div class="ui checkbox">
+        <input type="checkbox" tabindex="0" class="hidden"/>
+        <label>Cultiovation Manager CM</label>
+      </div>
+    </div>
+    <div class="inline field">
+      <div class="ui checked checkbox">
+        <input type="checkbox" tabindex="0" checked="" class="hidden"/>
+        <label>Area Manager AM</label>
+      </div>
+    </div>
+    <div class="inline field">
+      <div class="ui checkbox">
+        <input type="checkbox" tabindex="0" class="hidden"/>
+        <label>Field Officer FO</label>
+      </div>
+    </div>
+    <div class="field">
+      <label>Manager comments</label>
+      <textarea rows="3" ng-model="user.comments"></textarea>
+    </div>
+    <div class="ui segment">
+      <div class="inline field">
+        <div class="ui toggle checkbox">
+          <input type="checkbox" ng-model="user.status" class="hidden"/>
+          <label>Activate</label>
+        </div>
+      </div>
+    </div>
+    <button ui-sref="^" class="ui teal button">Save</button>
+    <button ui-sref="^" class="ui black button">Cancel</button>
+  </form>
+</div>

@@ -1,0 +1,31 @@
+
+<div>
+  <h2 ng-if="mode === 'new'" class="ui header">Add Farm</h2>
+  <h2 ng-if="mode !== 'new'" class="ui header">Edit Farm</h2>
+  <form class="ui form">
+    <div class="inline fields">
+      <div class="twelve wide field">
+        <label>Name</label>
+        <input type="text" name="first-name" value="Wheat farm"/>
+      </div>
+      <div class="four wide field">
+        <div class="ui toggle checkbox">
+          <input type="checkbox" checked="checked" tabindex="0" class="hidden"/>
+          <label>Enable</label>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label>Area</label>
+      <select name="area" class="ui dropdown">
+        <option value="sri-lanka">Sri Lanka</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Location</label>
+      <location></location>
+    </div>
+    <button ui-sref="^" class="ui teal button">Save</button>
+    <button ui-sref="^" class="ui black button">Cancel</button>
+  </form>
+</div>

@@ -1,0 +1,41 @@
+
+<div>
+  <h2 class="ui header">Users</h2>
+  <div class="ui form">
+    <div class="inline field ta-right">
+      <!--label Order by:-->
+      <!--select.ui.dropdown(name='actions')
+      option(value='name') Name
+      option(value='title') Title
+      option(value='date_joined') Date Joined
+      -->
+      <button ui-sref="accounts.users.add" class="ui teal button">Add User</button>
+    </div>
+  </div>
+  <table class="ui table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Title</th>
+        <th>Date Joined</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in users">
+        <td>
+          <h4 class="ui image header"><img ng-src="{{user.avatar}}" class="ui mini rounded image"/>
+            <div class="content">{{user.name}}
+              <div class="sub header">{{user.email}}</div>
+            </div>
+          </h4>
+        </td>
+        <td>{{user.title}}</td>
+        <td>{{user.date_joined|date:"short"}}</td>
+        <td>{{user.status}}</td>
+        <td><a ui-sref="accounts.users.edit">Edit</a>&nbsp;|&nbsp;<a ui-sref="accounts.users.delete">Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

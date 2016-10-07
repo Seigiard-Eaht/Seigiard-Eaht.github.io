@@ -1,0 +1,34 @@
+
+<div>
+  <h2 class="ui header">Farms</h2>
+  <div class="ui form">
+    <div class="inline field">
+      <label>Sort by:</label>
+      <select name="actions" ui-select="ui-select" class="ui dropdown">
+        <option value="">Area</option>
+        <option value="name">Sri Lanka</option>
+      </select>
+      <button ui-sref="fields.farms.add" class="ui teal right floated button">Add Farm</button>
+    </div>
+  </div>
+  <table class="ui table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Area</th>
+        <th>Fields</th>
+        <th>Total Harvest (kg)</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="type in $ctrl.types">
+        <td>{{type}} farm</td>
+        <td><a ui-sref="fields.areas.edit({id: 1})">Colombo</a></td>
+        <td><a ui-sref="fields.list">312</a></td>
+        <td>12 3213</td>
+        <td><a ui-sref="fields.farms.edit">Edit</a>&nbsp;|&nbsp;<a ui-sref="fields.farms.edit">Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

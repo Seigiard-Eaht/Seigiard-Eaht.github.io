@@ -1,0 +1,7 @@
+<a ui-sref="{{$ctrl.item.link}}" ui-sref-active="active" ng-class="{'link': $ctrl.item.menu}" class="item">{{::$ctrl.item.name}}
+  <div ng-if="$ctrl.item.label" ng-bind="::$ctrl.item.label" class="ui label"></div></a>
+<div ng-if="$ctrl.item.menu" class="item submenu">{{::$ctrl.item.name}}
+  <div ng-if="$ctrl.item.label" ng-bind="::$ctrl.item.label" class="ui label"></div>
+  <div class="menu"><a ng-repeat="subitem in $ctrl.item.menu" ui-sref="{{subitem.link}}" ui-sref-active="active" class="item">{{::subitem.name}}
+      <div ng-if="subitem.label" ng-bind="::subitem.label" class="ui label"></div></a></div>
+</div>

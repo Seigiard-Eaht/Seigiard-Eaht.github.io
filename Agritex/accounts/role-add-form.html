@@ -1,0 +1,54 @@
+
+<div class="ui segment">
+  <h2 ng-if="mode === 'new'" class="ui header">Add Role</h2>
+  <h2 ng-if="mode !== 'new'" class="ui header">Edit Role</h2>
+  <form class="ui form">
+    <div class="field">
+      <label>Role Name</label>
+      <input type="text" name="first-name" ng-model="role.name" placeholder=""/>
+    </div>
+    <div class="field">
+      <label>Role Code</label>
+      <input type="email" name="email" placeholder="" ng-model="role.code"/>
+    </div>
+    <h5>Accesses</h5>
+    <div class="inline field">
+      <div class="ui toggle checkbox">
+        <input type="checkbox" tabindex="0" class="hidden"/>
+        <label>Manage Areas</label>
+      </div>
+    </div>
+    <div class="inline field">
+      <div class="ui toggle checkbox">
+        <input type="checkbox" tabindex="0" class="hidden"/>
+        <label>Manage Farms</label>
+      </div>
+    </div>
+    <div class="inline field">
+      <div class="ui toggle checkbox">
+        <input type="checkbox" tabindex="0" class="hidden"/>
+        <label>Manage Fields</label>
+      </div>
+    </div>
+    <div class="inline field">
+      <div class="ui toggle checkbox">
+        <input type="checkbox" tabindex="0" class="hidden"/>
+        <label>Manage Activities</label>
+      </div>
+    </div>
+    <div class="inline field">
+      <div class="ui toggle checkbox">
+        <input type="checkbox" tabindex="0" class="hidden"/>
+        <label>Manage Schedules</label>
+      </div>
+    </div>
+    <div class="inline field">
+      <div class="ui toggle checkbox">
+        <input type="checkbox" tabindex="0" class="hidden"/>
+        <label>Manage Users</label>
+      </div>
+    </div>
+    <button ui-sref="^" class="ui teal button">Save</button>
+    <button ui-sref="^" class="ui black button">Cancel</button>
+  </form>
+</div>

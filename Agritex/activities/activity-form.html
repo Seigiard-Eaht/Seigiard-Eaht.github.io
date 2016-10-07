@@ -1,0 +1,31 @@
+
+<form class="ui form">
+  <div class="two fields">
+    <div class="field">
+      <label>Name</label>
+      <input type="text" name="first-name" placeholder="" ng-model="$ctrl.activity.name"/>
+    </div>
+    <div class="field">
+      <label>Type</label>
+      <select name="actions" ng-model="$ctrl.activity.type" class="ui dropdown">
+        <option value="planting">Planting</option>
+        <option value="inspection">Inspection</option>
+        <option value="cropmanagement">Crop Management</option>
+        <option value="harvesting">Harvesting</option>
+      </select>
+    </div>
+  </div>
+  <div class="field">
+    <label>Description</label>
+    <textarea rows="3" placeholder="" ng-model="$ctrl.activity.description"></textarea>
+  </div>
+  <div class="ui segment">
+    <h3 class="ui header">Report Fields</h3>
+    <activity-report-field ng-repeat="reportField in $ctrl.activity.report track by $index" report-field="reportField"></activity-report-field>
+    <div class="field">
+      <button type="button" ng-click="$ctrl.addReportField()" class="fluid ui teal button">Add report field</button>
+    </div>
+  </div>
+  <button ui-sref="^" class="ui teal button">Save</button>
+  <button ui-sref="^" class="ui black button">Cancel</button>
+</form>
