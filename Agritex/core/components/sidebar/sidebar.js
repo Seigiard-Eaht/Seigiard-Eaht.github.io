@@ -48,8 +48,7 @@
                 name: 'Accounts', link: 'accounts',
                 menu: [
                     { name: 'Users', link: 'accounts.users' },
-                    { name: 'Map', link: 'accounts.roles' },
-                    { name: 'Log', link: 'accounts.log' }
+                    { name: 'Roles', link: 'accounts.roles' }
                 ]
             }
         ];
