@@ -3,13 +3,22 @@
   <h2 ng-if="mode === 'new'" class="ui header">Add Role</h2>
   <h2 ng-if="mode !== 'new'" class="ui header">Edit Role</h2>
   <form class="ui form">
-    <div class="field">
-      <label>Role Name</label>
-      <input type="text" name="first-name" ng-model="role.name" placeholder=""/>
+    <div class="two fields">
+      <div class="field">
+        <label>Role Name</label>
+        <input type="text" name="first-name" ng-model="role.name" placeholder=""/>
+      </div>
+      <div class="field">
+        <label>Role Code</label>
+        <input type="email" name="email" placeholder="" ng-model="role.code"/>
+      </div>
     </div>
     <div class="field">
-      <label>Role Code</label>
-      <input type="email" name="email" placeholder="" ng-model="role.code"/>
+      <label>Type</label>
+      <select ui-select="ui-select">
+        <option>AGTL plantations</option>
+        <option>Out-grower farms</option>
+      </select>
     </div>
     <h5>Accesses</h5>
     <div class="inline field">

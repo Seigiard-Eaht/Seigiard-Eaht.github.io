@@ -31,7 +31,7 @@
                 menu: [
                     { name: 'Fields', link: 'fields.list' },
                     { name: 'Farms', link: 'fields.farms' },
-                    { name: 'Areas', link: 'fields.areas' }
+                    { name: 'Clusters', link: 'fields.areas' }
                 ]
             },
             {

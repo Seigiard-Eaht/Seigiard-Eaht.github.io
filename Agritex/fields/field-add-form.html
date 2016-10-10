@@ -25,13 +25,20 @@
       <div class="field">
         <label>Area</label>
         <select name="area" class="ui dropdown">
-          <option value="sri-lanka">Sri Lanka</option>
+          <option value="sri-lanka">Colombo</option>
         </select>
       </div>
     </div>
     <div class="field">
       <label>Location</label>
       <location></location>
+    </div>
+    <div class="field">
+      <label>Type</label>
+      <select ui-select="ui-select" disabled="disabled">
+        <option selected="selected">AGTL plantations</option>
+        <option>Out-grower farms</option>
+      </select>
     </div>
     <div class="field">
       <label>Field Officer</label>
@@ -42,7 +49,7 @@
     <button ui-sref="^" class="ui teal button">Save</button>
     <button ui-sref="^" class="ui black button">Cancel</button>
   </form>
-  <div class="ui raised segment">
+  <div ng-if="mode !== 'new'" class="ui raised segment">
     <h4><a href="">Current Season</a></h4>
     <ul>
       <li>Planting has been finished on 24.07</li>

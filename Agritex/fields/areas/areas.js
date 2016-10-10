@@ -14,7 +14,7 @@
                 url: '/add',
                 views: {
                     '@fields': {
-                        template: '<h2 class="ui header">Add area</h2><area-add></area-add>'
+                        template: '<h2 class="ui header">Add cluster</h2><area-add></area-add>'
                     }
                 }
             })
@@ -22,7 +22,7 @@
                 url: '/edit/:id',
                 views: {
                     '@fields': {
-                        template: '<h2 class="ui header">Edit area</h2><area-edit></area-edit>'
+                        template: '<h2 class="ui header">Edit cluster</h2><area-edit></area-edit>'
                     }
                 }
             })
@@ -30,7 +30,7 @@
                 url: '/delete/:id',
                 views: {
                     'aside@fields': {
-                        template: '<delete-confirmation delete-item="Abu Dhabi area"></delete-confirmation>'
+                        template: '<delete-confirmation delete-item="Colombo cluster"></delete-confirmation>'
                     }
                 }
             });

@@ -12,16 +12,18 @@
   <table class="ui table">
     <thead>
       <tr>
+        <th>&nbsp;</th>
         <th>Name</th>
-        <th>Code</th>
+        <th>Type</th>
         <th>Actions</th>
       </tr>
     </thead>
     <tbody>
       <tr ng-repeat="role in roles">
-        <td width="80%">{{role.name}}</td>
         <td>{{role.code}}</td>
-        <td no-wrap="no-wrap"><a ui-sref="accounts.roles.edit">Edit</a>&nbsp;|&nbsp;<a ui-sref="accounts.roles.delete">Delete</a></td>
+        <td width="75%">{{role.name}}</td>
+        <td nowrap="nowrap">{{role.system}}</td>
+        <td nowrap="nowrap"><a ui-sref="accounts.roles.edit">Edit</a>&nbsp;|&nbsp;<a ui-sref="accounts.roles.delete">Delete</a></td>
       </tr>
     </tbody>
   </table>
